@@ -1,0 +1,49 @@
+.card-body1{
+    display: grid;
+    grid-template-columns: 1fr;
+ 
+}
+.sidebarCard{
+    width: 18rem;
+    height: 41.5rem;
+}
+
+@media only screen and (max-width: 500px) {
+    .card-body1{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .sidebarCard{
+        width: 30rem;
+        height: 122.5rem;
+        position: absolute;
+        z-index: 1;
+        
+    }
+}
+@media only screen and (min-width: 500px ) and (max-width:800px) {
+    .card-body1{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    } 
+    .sidebarCard{
+        width: 40rem;
+        height: 122.5rem;
+        position: absolute;
+        z-index: 1;
+    }
+}
+
+@media only screen and (min-width: 800px ) and (max-width:1000px) {
+    .card-body1{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 6rem;
+    } 
+    .sidebarCard{
+        width: 40rem;
+        height: 122.5rem;
+    }
+}

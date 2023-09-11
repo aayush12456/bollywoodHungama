@@ -1,0 +1,212 @@
+.card-body{
+    display: flex;
+    gap: 12rem;
+}
+.cards{
+    background-color: #060d17;
+    color: #999C9F;
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+.auth{
+    padding-left: 4rem;
+}
+.search{
+    margin-left: 16rem;
+    border: none;
+}
+.input{
+    padding-left: 1rem;
+    width: 32rem;
+    height: 3rem;
+}
+
+
+ .heading{
+ position: relative;
+ left: -4rem;
+ }
+
+.userAdd{
+    margin-left: -6rem;
+}
+
+ .headerCard{
+    width: 100%;
+    background-color: #060d17;
+    color: #999C9F;
+    font-weight: 400;
+    font-size: 1.2rem;
+    z-index: 1;
+ }
+ .searchMovies{
+    width: 100%;
+ }
+.searchbar{
+    width: 32rem;
+    height: 3rem;
+}
+.img-bolly{
+    width: 10rem;
+    height: 4rem;
+    margin-left: -11rem;
+}
+.img-search{
+    margin-left: -2rem;
+    margin-top: 1rem;
+}
+.searchMovies{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.userAdd{
+    padding-left: 2rem;
+}
+@media only screen and (max-width: 500px) {
+    .headerCard{
+        width: 331%;
+        background-color: #060d17;
+        color: #999C9F;
+        font-weight: 400;
+        font-size: 1.2rem;
+        height: 12rem;
+   
+     }
+     .card-body{
+        display: flex;
+        gap: 12rem;
+    }
+     .hamburger{
+        width: 6rem;
+    }
+    .img-bolly{
+        width: 14rem;
+        height: 4rem;
+        margin-top: 1rem;
+    
+    }
+    .signout{
+        display: none;
+    }
+    .userAdd{
+        display: none;
+    }
+    .searchbar{
+        width: 32rem;
+        height: 5.8rem;
+        font-size: 2rem;
+        margin-top: 1rem;
+    }
+    .img-search{
+        margin-left: -3rem;
+        margin-top: 3rem;
+       width: 2rem;
+    } 
+}
+
+
+@media only screen and (min-width: 500px ) and (max-width:800px) {
+    .headerCard{
+        width: 331%;
+        background-color: #060d17;
+        color: #999C9F;
+        font-weight: 400;
+        font-size: 1.2rem;
+        height: 12rem;
+     }
+     .img-bolly{
+        width: 26rem;
+        height: 7rem;
+        margin-left: -10rem;
+        margin-top: 1rem;
+    }
+    .signout{
+        display: none;
+    }
+    .userAdd{
+        display: none;
+    }
+    .searchbar{
+        width: 59rem;
+        height: 5.8rem;
+        font-size: 2rem;
+        margin-top: 1rem;
+    }
+    .img-search{
+        margin-left: -5rem;
+        margin-top: 2rem;
+        width: 3rem;
+    } 
+}
+
+@media only screen and (min-width: 800px ) and (max-width:1000px) {
+    .headerCard{
+        width: 331%;
+        background-color: #060d17;
+        color: #999C9F;
+        font-weight: 400;
+        font-size: 1.2rem;
+        height: 12rem;
+     }
+     .img-bolly{
+        width: 26rem;
+        height: 7rem;
+        margin-left: -10rem;
+        margin-top: 1rem;
+    }
+    .signout{
+        display: none;
+    }
+    .userAdd{
+        display: none;
+    }
+    .searchbar{
+        width: 84rem;
+        height: 5.8rem;
+        font-size: 2rem;
+        margin-top: 1rem;
+    }
+    .img-search{
+        margin-left: -5rem;
+        margin-top: 2rem;
+        width: 3rem;
+    } 
+}
+@media only screen and (min-width: 1000px ) and (max-width:1350px) {
+.headerCard{
+    width: 133%;
+}
+}
+/* @media only screen and (max-width: 1130px) {
+.cards{
+    width: 71rem;
+    font-size: 1rem;
+}
+.auth{
+    padding-left: 4rem;
+}
+}
+.hamburger{
+    width: 2rem;
+}
+@media only screen and (max-width: 500px) {
+    .cards{
+        font-size: 2rem;
+    }
+    .input{
+        padding-left: 1rem;
+        width: 32rem;
+        height: 5rem;
+    }
+} */
+@media only screen and (min-width: 1000px) {
+    .hamburger{
+    width: 2rem;
+    display: none;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .auth{
+        display: none;
+    }
+}

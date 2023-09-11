@@ -1,0 +1,16 @@
+.card-input{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+}
+.movieCard{
+    width: 70rem;
+}
+.buttons{
+    position: relative;
+    left: -27rem;
+}
+.text{
+    color: red;
+}
+

@@ -1,0 +1,24 @@
+@media only screen and (min-width: 1000px) {
+    .sidebar{
+        display: none;
+    }
+    
+   
+}
+@media only screen and (max-width: 1000px) {
+    .bigSidebar{
+        display: none;
+    }
+}
+.parentBoard{
+    position: sticky;
+    top: 0%;
+    z-index: 1;
+}
+.bigSidebar{
+position: fixed;
+}
+.sidebar{
+    position: fixed;
+    z-index: 1;
+}
