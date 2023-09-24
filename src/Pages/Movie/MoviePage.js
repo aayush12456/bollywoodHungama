@@ -1,4 +1,4 @@
-import AddMovieData from "../../components/common/AddMovie/AddMovieData"
+import AddMovieData from "../../Home/AddMovieData"
 
 const MoviePage=()=>{
 return (

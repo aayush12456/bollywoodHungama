@@ -64,7 +64,7 @@
 }
 @media only screen and (max-width: 500px) {
     .headerCard{
-        width: 331%;
+        width: 400%;
         background-color: #060d17;
         color: #999C9F;
         font-weight: 400;

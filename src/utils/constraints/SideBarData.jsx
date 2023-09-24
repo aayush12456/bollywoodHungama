@@ -3,7 +3,10 @@ import store from '../../assets/sidebaricons/shop.png'
 import download from '../../assets/sidebaricons/download.png'
 import categories from '../../assets/sidebaricons/category.png'
 import channels from '../../assets/sidebaricons/network.png'
-
+import upArrow from '../../assets/sidebaricons/upArrow.svg'
+import leftArrow from '../../assets/sidebaricons/leftArrow.svg'
+import rightArrow from '../../assets/sidebaricons/rightArrow.svg'
+import downArrow from '../../assets/sidebaricons/downArrow.svg'
 export const SidebarData=[
     {
         id:'1',title:'Home',image:home
@@ -15,7 +18,11 @@ export const SidebarData=[
         id:'3',title:'Channels',image:channels
     },
     {
-        id:'4',title:'Categories',image:categories
+        id:'4',title:'Categories',image:categories,leftArrow:leftArrow,rightArrow:rightArrow,upArrow:upArrow,downArrow:downArrow,
+  
+       feature: {name:'Featured Collections',upArrow:upArrow,downArrow:downArrow,array:[{language:'Hindi'},{language:'English'}]},
+       genre: {name:'Genre',upArrow:upArrow,downArrow:downArrow,array:[{language:'Comedy'},{language:'Romance'},{language:'Drama'}]},
+ 
     },
     {
         id:'5',title:'Download',image:download

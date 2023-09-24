@@ -1,8 +1,9 @@
-import { AddMovieData } from '../../../Redux/Slice/movieSlice/movieSlice'
-import { AddMovieSchema } from '../../../schemas'
+import {AddMovieData} from '../Redux/Slice/movieSlice/movieSlice'
+import { AddMovieSchema } from '../schemas'
 import './AddMovie.css'
 import { useFormik } from 'formik'
 import { useDispatch } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 const initialValues = {
   Heading: '',
   Id: '',
@@ -22,12 +23,14 @@ const initialValues = {
 }
 const AddMovie = () => {
   const dispatch=useDispatch()
+ const navigate=useNavigate()
   const { values, errors, handleBlur, handleChange, touched,handleSubmit } = useFormik({
     initialValues: initialValues,
     validationSchema:AddMovieSchema,
     onSubmit: (values,action) => {
       action.resetForm()
       dispatch(AddMovieData(values))
+      navigate('/')
     }
   })
   return (

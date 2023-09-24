@@ -1,0 +1,11 @@
+.headingTitle{
+    padding-top: 2rem;
+    padding-left: 20rem;
+}
+.cardData{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    margin-left: 19rem;
+    margin-top: 1rem;
+}

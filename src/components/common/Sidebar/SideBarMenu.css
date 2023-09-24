@@ -14,6 +14,19 @@
 .icon {
     filter: brightness(0) invert(1);
   }
+  .downArrow {
+    filter: brightness(0) invert(1);
+    width: 1rem;
+    margin-left:13rem;
+    margin-top: -4rem;
+  }
+  .name{
+    padding-left: 1rem;
+  }
+  .language{
+
+    padding-left: 1rem;
+  }
 @media only screen and (min-width: 1000px) {
 .authdata{
 display: none;

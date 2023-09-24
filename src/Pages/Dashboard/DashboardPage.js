@@ -17,6 +17,7 @@ return (
     {
     selector &&<Sidebar/>
 }
+
     </div>
     <div className="outlet" >
     <Outlet/>

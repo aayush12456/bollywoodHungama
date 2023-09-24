@@ -8,10 +8,10 @@ const Sidebar=()=>{
         <div class="card sidebarCard" style={{backgroundColor:'#060d17'}}>
   <div class="card-body1">
     {
- SidebarData.map(item=>{
+ SidebarData?.map(item=>{
     return(
         <>
-        <Link key={item.id} style={{textDecoration:'none',color:'black'}}><SideBarMenu data={item}/></Link>
+        <Link key={item.id}  style={{textDecoration:'none',color:'black'}}><SideBarMenu data={item} /></Link>
         </>
     )
 })
