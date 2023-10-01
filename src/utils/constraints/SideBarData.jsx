@@ -15,13 +15,10 @@ export const SidebarData=[
         id:'2',title:'Store',image:store
     },
     {
-        id:'3',title:'Channels',image:channels
-    },
-    {
         id:'4',title:'Categories',image:categories,leftArrow:leftArrow,rightArrow:rightArrow,upArrow:upArrow,downArrow:downArrow,
   
-       feature: {name:'Featured Collections',upArrow:upArrow,downArrow:downArrow,array:[{language:'Hindi'},{language:'English'}]},
-       genre: {name:'Genre',upArrow:upArrow,downArrow:downArrow,array:[{language:'Comedy'},{language:'Romance'},{language:'Drama'}]},
+       feature: {name:'Featured Collections',upArrow:upArrow,downArrow:downArrow,array:[{language:'Tamil'}]},
+       genre: {name:'Genre',upArrow:upArrow,downArrow:downArrow,array:[{language:'Comedy'},{language:'Romance'},{language:'Drama'},{language:'Kids'}]},
  
     },
     {

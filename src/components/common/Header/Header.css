@@ -7,6 +7,15 @@
     color: #999C9F;
     font-weight: 400;
     font-size: 1.2rem;
+
+}
+.recommendations{
+    background-color: white;
+    position: absolute;
+    left: 25rem;
+    top: 4rem;
+    width: 32rem;
+
 }
 .auth{
     padding-left: 4rem;

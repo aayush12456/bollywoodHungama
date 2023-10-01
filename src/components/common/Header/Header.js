@@ -5,16 +5,58 @@ import hamburger from '../../../assets/headericons/hamburger.png'
 import { useDispatch } from 'react-redux'
 import { hamburgerActions } from '../../../Redux/Slice/authSlice/hamburgerSlice'
 import { useNavigate } from 'react-router-dom'
-
+import { useState,useEffect } from 'react'
+import { movieData } from '../../../utils/constraints/ShowMovie'
 const Header=()=>{
   const dispatch=useDispatch()
   const navigate=useNavigate()
-
+  const [searchItem,setSearch]=useState(true)
+  const [recommendations, setRecommendations] = useState([]);
+  const [searchResult, setSearchResult] = useState([]);
+  const movieArray = Object.values(movieData);
   const hamburgerHandler=()=>{
    dispatch(hamburgerActions.handleToggle())
     }
 const addMovie=()=>{
   navigate('/AddMovie')
+}
+const updateRecommendations = (inputText) => {
+  const lowerCaseInput = inputText.toLowerCase();
+  const filteredMovies = movieArray.filter(
+    (item) => item.Title.toLowerCase().includes(lowerCaseInput)
+    
+  );
+  if (filteredMovies.length === 0) {
+    setSearchResult([{ id: 'not-available', Title: 'Not Available' }]);
+  } else {
+    setSearchResult([]);
+  }
+  setRecommendations(
+    inputText === '' ? [] : filteredMovies // Clear recommendations if inputText is empty
+  );
+  
+};
+;
+
+const handleBackspace = (e) => {
+  if (e.keyCode === 8) {
+    setSearch('');
+    setRecommendations([]);
+  }
+};
+
+useEffect(() => {
+  window.addEventListener('keydown', handleBackspace);
+  return () => {
+    window.removeEventListener('keydown', handleBackspace);
+  };
+}, []);
+const searchTitleData=(recommendation)=>{
+navigate('/search',{state:recommendation})
+setRecommendations([])
+}
+const login=()=>{
+  navigate('/login')
 }
     return (
         <>
@@ -26,65 +68,51 @@ const addMovie=()=>{
   <div class="form-group">
   <img src={bollywood} className=' img-bolly'/>
   </div>
+  
   <div class="form-group searchMovies">
-    <input type="text" class="form-control searchbar" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Search Movies"/>
+    <form>
+    <input type="text" class="form-control searchbar" onChange={(e) => {
+         
+                updateRecommendations(e.target.value);
+              }} id="exampleInputEmail1" aria-describedby="emailHelp"  placeholder="Search Movies" autoComplete='off'/>
+    </form>
     <img src={search} className='img-search'/> 
   </div>
+ 
+
   <div class="form-group signout ">
-   <p>Signout</p>
+   <p onClick={login}>Login</p>
   </div>
   <div class="form-group userAdd">
    <p onClick={addMovie}>Add User</p>
   </div>
   </div>
+  {recommendations.length > 0 && (
+            <div className="recommendations">
+              <ul style={{display:"grid",gridTemplateColumns:'1fr',gap:'1.4rem'}}>
+                {recommendations.map((recommendation) => (
+                  <li key={recommendation.id} style={{listStyleType:'none'}} onClick={()=>searchTitleData(recommendation)}>{recommendation.Title}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+           {searchResult.length > 0 && (
+          <div className="recommendations">
+            <ul style={{ display: "grid", gridTemplateColumns: "1fr", gap: "1.4rem" }}>
+              {searchResult.map((result) => (
+                <li
+                  key={result.id}
+                  style={{ listStyleType: "none" }}
+                  onClick={() => searchTitleData(result)}
+                >
+                  {result.Title}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
 </div>
-        {/* <div class="card cards" >
-  <div class="card-body">
-    <div >
-      <img src={hamburger}className='hamburger' onClick={hamburgerHandler} />
-    </div>
-    <div className='title'>
-<p className='heading'>Navbar</p>
-    </div>
-    <div className='search'>
-    <input type="text" placeholder="search movies" className="input"/> 
-    <img src={search} className='img'/> 
-    </div>
-    <div className='auth'>
-     <p>Signout</p>
-    </div>
-    <p onClick={addMovie}>Add Movie</p>
-    
-  </div>
-</div> */}
-{/* <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <div className='title'>
-    <a class="navbar-brand" href="#">Navbar</a>
-    </div>
-    <div className='searchbox'>
-    <form class="d-flex search" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-      </form>
-    </div>
-    <div className='toggle'>
-    <ul class="navbar-nav me-auto mb-2 mb-lg-0 list">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"/></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-     
-  </div>
-</nav> */}
+        
 
         </>
     )

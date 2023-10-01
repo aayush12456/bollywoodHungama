@@ -44,10 +44,10 @@ const SideBarMenu=({data})=>{
         {!nameupimg&&<img src={data.feature?.upArrow} className='downArrow' onClick={nameupClick}/>}
         {
         !nameupimg && data.feature?.array.map(item=>{
-                console.log(item)
+            const language=item.language
                 return (
                    <>
-                  { <h6 className='text-white language'>{item.language}</h6>}
+                 {<Link to={`/feature/${language}`} style={{textDecoration:'none'}}><h6 className='text-white language'>{item.language}</h6></Link>}
                    </> 
                 )
             })

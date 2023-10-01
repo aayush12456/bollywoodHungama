@@ -1,1 +1,1 @@
-export const Title=['recommend','feelgood','comedy','romance','drama']
+export const Title=['recommend','feelgood','comedy','romance','drama','kids','tamil']
