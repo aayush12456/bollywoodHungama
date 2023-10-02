@@ -23,6 +23,7 @@ const Login = () => {
 
   const getOtp = async (e) => {
     e.preventDefault();
+    console.log(mobile)
     setError('');
 
     if (mobile === '' || mobile === undefined) {
@@ -57,6 +58,7 @@ const Login = () => {
       <div>
         {!flag && (
           <form onSubmit={getOtp}>
+            <div className='mobileInput'>
             <div className="phone">
               <PhoneInput
                 placeholder="Enter phone number"
@@ -64,8 +66,9 @@ const Login = () => {
                 onChange={setMobile}
                 className="number"
               />
-            </div>
+              
             <div id="recaptcha-container"></div>
+            </div>
             <div className="button">
               <button type="submit" className="btn btn-primary">
                 Send OTP
@@ -73,6 +76,7 @@ const Login = () => {
               <button type="button" className="btn btn-secondary">
                 Cancel
               </button>
+            </div>
             </div>
           </form>
         )}

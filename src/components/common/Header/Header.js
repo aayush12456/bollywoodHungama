@@ -7,13 +7,28 @@ import { hamburgerActions } from '../../../Redux/Slice/authSlice/hamburgerSlice'
 import { useNavigate } from 'react-router-dom'
 import { useState,useEffect } from 'react'
 import { movieData } from '../../../utils/constraints/ShowMovie'
+import { useLocation } from 'react-router-dom'
+import { auth } from '../../../firebase/firebase'
+import { signOut } from 'firebase/auth'
 const Header=()=>{
   const dispatch=useDispatch()
   const navigate=useNavigate()
+    let mobile=useLocation()
+    console.log(mobile )
   const [searchItem,setSearch]=useState(true)
   const [recommendations, setRecommendations] = useState([]);
   const [searchResult, setSearchResult] = useState([]);
   const movieArray = Object.values(movieData);
+  const [mobileItem,setMobile]=useState(false)
+  const [mobileData,setMobileData]=useState(" ")
+  const [loginData,setLogin]=useState(true)
+  const [user, setUser] = useState({});
+  useEffect(()=>{
+   
+    const mobileData=mobile.state
+    setMobileData(mobileData)
+   },[])
+
   const hamburgerHandler=()=>{
    dispatch(hamburgerActions.handleToggle())
     }
@@ -58,6 +73,21 @@ setRecommendations([])
 const login=()=>{
   navigate('/login')
 }
+const mobiles=()=>{
+setMobile(true)
+}
+// function logOut() {
+//   return signOut(auth);
+// }
+// const handlelogout = async () => {
+//   try {
+//     await logOut();
+//     navigate("/");
+//     setMobileData(" ")
+//   } catch (error) {
+//     console.log(error.message);
+//   }
+// };
     return (
         <>
         <div class="card headerCard">
@@ -76,13 +106,20 @@ const login=()=>{
                 updateRecommendations(e.target.value);
               }} id="exampleInputEmail1" aria-describedby="emailHelp"  placeholder="Search Movies" autoComplete='off'/>
     </form>
-    <img src={search} className='img-search'/> 
+    <img src={search} className='img-search'/>
+   <p className='text-white' onClick={mobiles}>{mobileData}</p>
+   {mobileItem && mobileData && <div class="card" >
+    
+  <div class="card-body">
+    <h5 class="card-title" >Logout</h5>
   </div>
- 
+</div>} 
+  </div>
 
-  <div class="form-group signout ">
+
+  {<div class="form-group signout ">
    <p onClick={login}>Login</p>
-  </div>
+  </div>}
   <div class="form-group userAdd">
    <p onClick={addMovie}>Add User</p>
   </div>
@@ -91,7 +128,7 @@ const login=()=>{
             <div className="recommendations">
               <ul style={{display:"grid",gridTemplateColumns:'1fr',gap:'1.4rem'}}>
                 {recommendations.map((recommendation) => (
-                  <li key={recommendation.id} style={{listStyleType:'none'}} onClick={()=>searchTitleData(recommendation)}>{recommendation.Title}</li>
+                  <li key={recommendation.id} style={{listStyleType:'none',cursor:'pointer'}} onClick={()=>searchTitleData(recommendation)}>{recommendation.Title}</li>
                 ))}
               </ul>
             </div>

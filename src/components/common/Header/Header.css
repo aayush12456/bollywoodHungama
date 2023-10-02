@@ -17,6 +17,13 @@
     width: 32rem;
 
 }
+.mobile{
+    background-color: #060d17;
+    position: absolute;
+    left: 25rem;
+    top: 4rem;
+    width: 32rem; 
+}
 .auth{
     padding-left: 4rem;
 }

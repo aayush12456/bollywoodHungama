@@ -1,6 +1,8 @@
+
 import AddMovieData from "../../Home/AddMovieData"
 
 const MoviePage=()=>{
+  
 return (
     <>
    <div >

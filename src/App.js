@@ -29,7 +29,7 @@ function App() {
   element:<Dashboard/>,
   children:[
     {path:'',element:<MoviePage/>},
-    {path: '/movie',element:<ProtectedRoute><MovieContentPage/></ProtectedRoute>},
+    {path: '/movie',element:<MovieContentPage/>},
     {path: `/movie/video/${movieId}`,element:<ShowVideo/>},
     {path :'/genre/comedy',element:<GenrePage/>},
     {path :'/genre/romance',element:<RomancePage/>},

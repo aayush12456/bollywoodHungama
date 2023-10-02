@@ -4,7 +4,6 @@ const ShowVideo=()=>{
 return (
     <>
     <PlayVideo/>
-    <p>hi video</p>
     </>
 )
 }
