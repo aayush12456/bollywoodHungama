@@ -109,7 +109,6 @@ setMobile(true)
     <img src={search} className='img-search'/>
    <p className='text-white' onClick={mobiles}>{mobileData}</p>
    {mobileItem && mobileData && <div class="card" >
-    
   <div class="card-body">
     <h5 class="card-title" >Logout</h5>
   </div>

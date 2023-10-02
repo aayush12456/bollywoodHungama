@@ -12,7 +12,7 @@
     grid-template-columns: 1fr;
     gap: 1rem;
     margin-left: 30rem;
-    margin-top: 3rem;
+    margin-top: 10rem;
 }
 .captcha-container{
     width: 30rem;

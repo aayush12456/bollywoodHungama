@@ -47,7 +47,7 @@ const Login = () => {
 
     try {
       await result.confirm(otp);
-      navigate('/'); // Navigate to your desired route ("/" in this case)
+      navigate('/',{state:mobile}); // Navigate to your desired route ("/" in this case)
     } catch (err) {
       setError(err.message);
     }
@@ -69,7 +69,7 @@ const Login = () => {
               
             <div id="recaptcha-container"></div>
             </div>
-            <div className="button">
+            <div id="button">
               <button type="submit" className="btn btn-primary">
                 Send OTP
               </button>
