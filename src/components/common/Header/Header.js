@@ -22,7 +22,7 @@ const Header=()=>{
   const [mobileItem,setMobile]=useState(false)
   const [mobileData,setMobileData]=useState(" ")
   const [loginData,setLogin]=useState(true)
-  const [user, setUser] = useState({});
+  const [user, setUser] = useState(false);
   useEffect(()=>{
    
     const mobileData=mobile.state
@@ -75,19 +75,22 @@ const login=()=>{
 }
 const mobiles=()=>{
 setMobile(true)
+setUser(!user)
 }
-// function logOut() {
-//   return signOut(auth);
-// }
-// const handlelogout = async () => {
-//   try {
-//     await logOut();
-//     navigate("/");
-//     setMobileData(" ")
-//   } catch (error) {
-//     console.log(error.message);
-//   }
-// };
+function logOut() {
+  return signOut(auth);
+}
+const handlelogout = async () => {
+  try {
+    await logOut();
+    navigate("/");
+    setMobileData(" ")
+    setLogin(false)
+  } catch (error) {
+    console.log(error.message);
+  }
+};
+const addMobileData = "9479918217";
     return (
         <>
         <div class="card headerCard">
@@ -107,21 +110,26 @@ setMobile(true)
               }} id="exampleInputEmail1" aria-describedby="emailHelp"  placeholder="Search Movies" autoComplete='off'/>
     </form>
     <img src={search} className='img-search'/>
-   <p className='text-white' onClick={mobiles}>{mobileData}</p>
-   {mobileItem && mobileData && <div class="card" >
+ 
+   {mobileData && loginData && user && <div class="card cardLogin
+   " >
   <div class="card-body">
-    <h5 class="card-title" >Logout</h5>
+    <h5 class="card-title" onClick={handlelogout} >Logout</h5>
   </div>
 </div>} 
   </div>
+  <p className='text-white' onClick={mobiles}>{mobileData}</p>
 
-
-  {<div class="form-group signout ">
-   <p onClick={login}>Login</p>
-  </div>}
-  <div class="form-group userAdd">
-   <p onClick={addMovie}>Add User</p>
+  {!mobileData && loginData && (
+  <div class="form-group signout">
+    <p onClick={login}>Login</p>
   </div>
+)}
+  <div className="form-group userAdd">
+        {mobileData === addMobileData && (
+          <p onClick={addMovie}>Add User</p>
+        )}
+      </div>
   </div>
   {recommendations.length > 0 && (
             <div className="recommendations">

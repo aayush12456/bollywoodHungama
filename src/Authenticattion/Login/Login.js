@@ -73,9 +73,6 @@ const Login = () => {
               <button type="submit" className="btn btn-primary">
                 Send OTP
               </button>
-              <button type="button" className="btn btn-secondary">
-                Cancel
-              </button>
             </div>
             </div>
           </form>

@@ -9,6 +9,12 @@
     font-size: 1.2rem;
 
 }
+.cardLogin{
+    position: absolute;
+    margin-left: 45rem;
+    top: 3rem;
+    width: 9rem;
+}
 .recommendations{
     background-color: white;
     position: absolute;
