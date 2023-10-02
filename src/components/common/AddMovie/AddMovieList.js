@@ -49,7 +49,7 @@ const AddMovieList = ({ movies,index }) => {
            
           </div>
       </div>
-     
+    
      
 
     </>

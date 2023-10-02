@@ -4,6 +4,7 @@ const MovieContentPage=()=>{
 return (
     <>
     <MovieContent/>
+    
     </>
 )
 }

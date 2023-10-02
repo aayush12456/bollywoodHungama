@@ -9,7 +9,7 @@ import './login.css';
 const Login = () => {
   const [error, setError] = useState('');
   const [otp, setOtp] = useState('');
-  const [user, setUser] = useState(false);
+  const [user, setUser] = useState(true);
   const [mobile, setMobile] = useState('');
   const [flag, setFlag] = useState(false);
   const [result, setResult] = useState('');
@@ -78,7 +78,7 @@ const Login = () => {
           </form>
         )}
 
-        <form onSubmit={verifyOtp} style={{ display: flag ? 'block' : 'none' }}>
+       { <form onSubmit={verifyOtp} style={{ display: flag ? 'block' : 'none' }}>
           <div className="mb-3">
             <input
               type="text"
@@ -92,7 +92,7 @@ const Login = () => {
             <button
               type="button"
               className="btn btn-secondary"
-              onClick={() => navigate('/login')}
+              onClick={() =>setUser(true)}
             >
               Cancel
             </button>
@@ -101,7 +101,7 @@ const Login = () => {
               Verify
             </button>
           </div>
-        </form>
+        </form>}
       </div>
     </>
   );

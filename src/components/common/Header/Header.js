@@ -90,7 +90,7 @@ const handlelogout = async () => {
     console.log(error.message);
   }
 };
-const addMobileData = "9479918217";
+console.log(searchResult)
     return (
         <>
         <div class="card headerCard">
@@ -120,15 +120,15 @@ const addMobileData = "9479918217";
   </div>
   <p className='text-white' onClick={mobiles}>{mobileData}</p>
 
-  {!mobileData && loginData && (
+  {!mobileData  && (
   <div class="form-group signout">
     <p onClick={login}>Login</p>
   </div>
 )}
   <div className="form-group userAdd">
-        {mobileData === addMobileData && (
+        
           <p onClick={addMovie}>Add User</p>
-        )}
+     
       </div>
   </div>
   {recommendations.length > 0 && (
@@ -144,6 +144,7 @@ const addMobileData = "9479918217";
           <div className="recommendations">
             <ul style={{ display: "grid", gridTemplateColumns: "1fr", gap: "1.4rem" }}>
               {searchResult.map((result) => (
+              
                 <li
                   key={result.id}
                   style={{ listStyleType: "none" }}

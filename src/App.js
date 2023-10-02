@@ -17,6 +17,7 @@ import LoginPage from './Pages/Login/LoginPage';
 import ProtectedRoute from './Authenticattion/Protected/ProtectedRoute';
 
 
+
 function App() {
   const videoSelector=useSelector(state=>state.passMovie.passMovie)
   const dataSlice=useSelector(state=>state.dataSlice)
@@ -41,7 +42,12 @@ function App() {
   {path:'/AddMovie',element:<AddMovie/>},
   {path:'/login',element:<LoginPage/>}
  ])
-  return <RouterProvider router={router}/>
+  return (
+    <>
+    <RouterProvider router={router}/>
+    
+    </>
+  )
 }
 
 export default App;
