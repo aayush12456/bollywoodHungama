@@ -4,6 +4,7 @@ import './AddMovie.css'
 import { useFormik } from 'formik'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
+import swal from 'sweetalert';
 const initialValues = {
   Heading: '',
   Id: '',
@@ -30,6 +31,12 @@ const AddMovie = () => {
     onSubmit: (values,action) => {
       action.resetForm()
       dispatch(AddMovieData(values))
+      swal({
+        text: " Movie Added Successfully!",
+        icon: "success",
+        buttons: false,
+        timer: 3000,
+    });
       navigate('/')
     }
   })
@@ -112,7 +119,6 @@ const AddMovie = () => {
         <button type="Submit" class="btn btn-primary mt-5  buttons ">Add Movie</button>
         </div>
         </form>
-       
       </div>
     </>
   )

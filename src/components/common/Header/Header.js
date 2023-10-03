@@ -125,11 +125,13 @@ console.log(searchResult)
     <p onClick={login}>Login</p>
   </div>
 )}
-  <div className="form-group userAdd">
-        
-          <p onClick={addMovie}>Add User</p>
-     
-      </div>
+ {mobileData === "+918770770302" ? (
+            <div className="form-group userAdd">
+              <p onClick={addMovie}>Add User</p>
+            </div>
+
+          ) : null}
+       
   </div>
   {recommendations.length > 0 && (
             <div className="recommendations">

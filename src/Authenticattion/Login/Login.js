@@ -5,23 +5,25 @@ import { useState } from 'react';
 import { RecaptchaVerifier, signInWithPhoneNumber } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
 import './login.css';
+import swal from 'sweetalert';
 
 const Login = () => {
   const [error, setError] = useState('');
   const [otp, setOtp] = useState('');
-  const [user, setUser] = useState(true);
   const [mobile, setMobile] = useState('');
   const [flag, setFlag] = useState(false);
   const [result, setResult] = useState('');
   const navigate = useNavigate();
 
   function setUpRecaptcha(mobile) {
+    debugger
     const recaptchaVerifier = new RecaptchaVerifier(auth, 'recaptcha-container', {});
     recaptchaVerifier.render();
     return signInWithPhoneNumber(auth, mobile, recaptchaVerifier);
   }
 
   const getOtp = async (e) => {
+    debugger
     e.preventDefault();
     console.log(mobile)
     setError('');
@@ -40,6 +42,7 @@ const Login = () => {
   };
 
   const verifyOtp = async (e) => {
+    debugger
     e.preventDefault();
     setError('');
 
@@ -47,6 +50,12 @@ const Login = () => {
 
     try {
       await result.confirm(otp);
+      swal({
+        text: "Login Successfully!",
+        icon: "success",
+        buttons: false,
+        timer: 3000,
+    });
       navigate('/',{state:mobile}); // Navigate to your desired route ("/" in this case)
     } catch (err) {
       setError(err.message);
@@ -92,7 +101,7 @@ const Login = () => {
             <button
               type="button"
               className="btn btn-secondary"
-              onClick={() =>setUser(true)}
+              onClick={()=>setFlag(false)}
             >
               Cancel
             </button>
