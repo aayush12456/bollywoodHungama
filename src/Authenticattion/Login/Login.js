@@ -73,16 +73,19 @@ const Login = () => {
                 placeholder="Enter phone number"
                 value={mobile}
                 onChange={setMobile}
+                defaultCountry='IN'
                 className="number"
               />
               
             <div id="recaptcha-container"></div>
             </div>
-            <div id="button">
-              <button type="submit" className="btn btn-primary">
-                Send OTP
-              </button>
-            </div>
+            {mobile &&  mobile.trim().length === 13 && (
+  <div id="button">
+    <button type="submit" className="btn btn-primary">
+      Send OTP
+    </button>
+  </div>
+)}
             </div>
           </form>
         )}
