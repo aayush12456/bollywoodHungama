@@ -13,7 +13,21 @@
     position: absolute;
     margin-left: 50rem;
     top: 3rem;
-    width: 9rem;
+    width: 19rem;
+    gap: 4rem;
+    background-color:#191e25;
+}
+.profileColor{
+    color: #aaa;
+    font-size: 1.1rem;
+    padding-left: 4rem;
+    padding-top: 0.5rem;
+}
+.profileAccount{
+    color: #aaa;
+    font-size: 1.1rem;
+    padding-left: 1rem;
+    padding-top: 0.5rem;
 }
 .recommendations{
     background-color: white;
@@ -83,6 +97,51 @@
 }
 .userAdd{
     padding-left: 2rem;
+}
+.profileData{
+    display: flex;
+    gap: 1rem;
+}
+.profileImg{
+    width: 2rem;
+    height: 2rem;
+}
+.cardProfile{
+    display: flex;
+    gap: 2rem;
+}
+.manageProfile{
+    font-size: 1.1rem;
+    padding-left: 1rem;
+    cursor: pointer;
+    font-weight: 400;
+}
+.logout{
+    font-size: 1.1rem;
+    padding-left: 1rem;
+}
+.profileSvg{
+    width: 1.4rem;
+    height: 1.4rem;
+    filter: brightness(0) invert(1);
+    cursor: pointer;
+}
+.addNewDatas{
+    display: flex;
+    gap:0.6rem;
+    margin-left: 1rem;
+}
+.newDatas{
+    font-size: 1.1rem;
+}
+.mainData{
+    padding-left: 4rem;
+    cursor: pointer;
+}
+.watchList{
+    cursor: pointer;
+    padding-left: 1rem;
+    font-size: 1.1rem;
 }
 @media only screen and (max-width: 500px) {
     .headerCard{

@@ -1,0 +1,31 @@
+.watch{
+    font-size: 2rem;
+    font-weight: bold;
+    padding-top: 4rem;
+}
+.myProfileImg{
+    width: 6rem;
+    height: 6rem;
+}
+.addnewImg{
+    filter: brightness(0) invert(1);
+    width: 6rem;
+    height:6rem ;
+    cursor: pointer;
+}
+.profileData1{
+    display: flex;
+    gap: 2rem;
+    margin-left: 30rem;
+}
+.myProfileImg1{
+    width: 6rem;
+    height: 6rem;
+}
+.profileData2{
+    padding-left: 1.5rem;
+}
+.extraProfile{
+    display: flex;
+    gap: 2rem;
+}

@@ -5,6 +5,7 @@ import './DashboardPage.css'
 import { Outlet } from "react-router-dom"
 const Dashboard=()=>{
     const selector = useSelector((state) => state.hamburger.hamburgerToggle);
+    
 return (
     <>
     <div className="parentBoard">

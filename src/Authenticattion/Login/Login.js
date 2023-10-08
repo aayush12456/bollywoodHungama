@@ -75,6 +75,7 @@ const Login = () => {
                 onChange={setMobile}
                 defaultCountry='IN'
                 className="number"
+      
               />
               
             <div id="recaptcha-container"></div>
@@ -98,6 +99,7 @@ const Login = () => {
               placeholder="Enter OTP"
               onChange={(e) => setOtp(e.target.value)}
             />
+            {error ?<p className='otp'>Please enter valid otp</p>:null}
           </div>
           <div className="button-right">
             {/* Implement navigation logic after OTP verification */}

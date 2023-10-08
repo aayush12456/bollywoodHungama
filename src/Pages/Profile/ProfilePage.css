@@ -1,0 +1,8 @@
+.profilePage{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25rem;
+}
+.footerDiv{
+    background-color: #00050d;
+}

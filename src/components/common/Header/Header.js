@@ -10,7 +10,10 @@ import { movieData } from '../../../utils/constraints/ShowMovie'
 import { useLocation } from 'react-router-dom'
 import { auth } from '../../../firebase/firebase'
 import { signOut } from 'firebase/auth'
+import profile from '../../../assets/headericons/profile.png'
+import { profileData } from '../../../utils/constraints/ShowProfile'
 import Swal from 'sweetalert2'
+import swal from 'sweetalert'
 const Header = () => {
   const dispatch = useDispatch()
   const navigate = useNavigate()
@@ -24,12 +27,19 @@ const Header = () => {
   const [mobileData, setMobileData] = useState(" ")
   const [loginData, setLogin] = useState(true)
   const [user, setUser] = useState(false);
+  const [arr,setArr]=useState([])
+  const [selectedProfile, setSelectedProfile] = useState("");
   useEffect(() => {
 
     const mobileData = mobile.state
     setMobileData(mobileData)
   }, [])
-
+  useEffect(() => {
+    // This code will run only once when the component mounts
+    const profileArray = Object.values(profileData);
+    setArr(profileArray);
+  }, []); 
+  console.log(arr)
   const hamburgerHandler = () => {
     dispatch(hamburgerActions.handleToggle())
   }
@@ -75,9 +85,10 @@ const Header = () => {
     navigate('/login')
     setLogin(false)
   }
-  const mobiles = () => {
+  const mobiles = (mobileData) => {
     setMobile(true)
     setUser(!user)
+ setMobileData(mobileData)
   }
   function logOut() {
     return signOut(auth);
@@ -87,38 +98,58 @@ const Header = () => {
       await logOut();
       const swalWithBootstrapButtons = Swal.mixin({
         customClass: {
-          confirmButton: 'btn btn-success',
-          cancelButton: 'btn btn-danger'
+          cancelButton: 'btn btn-danger',
         },
-        buttonsStyling: false
-      })
+        buttonsStyling: false,
+      });
 
-      swalWithBootstrapButtons.fire({
-        title: 'Are you sure?',
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonText: 'Yes',
-        cancelButtonText: 'No',
-        reverseButtons: true
-      }).then((result) => {
-        if (result.isConfirmed) {
-          swalWithBootstrapButtons.fire(
-            'LogOut',
-            'Your have Successfully Logout.',
-            'success'
-          ).then(() => {
-            navigate("/");
-            setMobileData(""); // Set mobileData to an empty string
-            setUser(false); // Set user state to false
-          });
-        }
-      })
+      swalWithBootstrapButtons
+        .fire({
+          title: 'Are you sure?',
+          icon: 'warning',
+          showCancelButton: true,
+          confirmButtonText: 'Yes',
+          cancelButtonText: 'No',
+          reverseButtons: true,
+          preConfirm: () => {
+            // Handle the action when clicking "Yes"
+            // Hide the card and mobileData
+            setMobileData('');
+            setSelectedProfile('')
+            setUser(false);
+
+            // You can also navigate here if needed
+            navigate('/');
+            Swal.fire(
+              'Logged Out',
+              'You have successfully logged out.',
+              'success'
+            );
+            // No need to return anything since we've already handled the action
+          },
+        });
     } catch (error) {
       console.log(error.message);
     }
   };
-
   console.log(searchResult)
+  const manageProfile=()=>{
+    navigate('/profiles',{state:mobileData})
+  }
+  const addNew=()=>{
+    navigate('/newProfile')
+  }
+  const nameData=(profileName)=>{
+    setSelectedProfile(profileName)
+    swal({
+      text: "Switch to profile Successfully!",
+      icon: "success",
+      buttons: false,
+      timer: 3000,
+  });
+    navigate('/')
+    console.log('hello world')
+  }
   return (
     <>
       <div class="card headerCard">
@@ -138,15 +169,43 @@ const Header = () => {
               }} id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Search Movies" autoComplete='off' />
             </form>
             <img src={search} className='img-search' />
-
-            {mobileData && loginData && user && <div class="card cardLogin
-   " >
-              <div class="card-body">
-                <h5 class="card-title" onClick={handlelogout} style={{ cursor: 'pointer' }} >Logout</h5>
+            
+            {mobileData && loginData && user && <div class="card cardLogin" >
+              <div className='cardProfile'>
+                <div>
+                  <h4 className=' profileAccount'>Your Account</h4>
+                  <p className='text-white watchList'>WatchList</p>
+                <h5 class="card-title text-white logout" onClick={handlelogout} style={{ cursor: 'pointer' }} >Logout</h5>
+                  </div>         
+              <div>
+               <h4 className=' profileColor'>Profiles</h4>
+               {
+    arr.map(data=>{
+    
+      return (
+        <>
+        <p  className='text-white mainData' onClick={()=>nameData(data.name)}>{data.name||mobileData}</p>
+        </>
+      )
+    })
+   }
+              <p onClick={manageProfile} className='text-white manageProfile'>Manage Profile</p>
+              <div className='addNewDatas'>
+              <img src="https://www.svgrepo.com/show/73554/add-round-button.svg" onClick={addNew}  className='profileSvg'/>
+              <p className='text-white  text-center cursor-pointer newDatas' onClick={addNew}  style={{cursor:'pointer'}}> Add New</p>
+                </div>
+              </div>
               </div>
             </div>}
+          
+
+          
           </div>
-          <p className='text-white' onClick={mobiles} style={{ cursor: 'pointer' }}>{mobileData}</p>
+          <div className='profileData'>
+          <p className='text-white' onClick={()=>mobiles(mobileData)} style={{ cursor: 'pointer' }}>{selectedProfile||mobileData}</p>
+          {mobileData &&<img src={profile} className='profileImg' onClick={()=>mobiles(mobileData)} />}
+          </div>
+        
 
           {!mobileData && (
             <div class="form-group signout">

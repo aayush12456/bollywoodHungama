@@ -14,7 +14,10 @@ import KidsPage from './Pages/Genre/KidsPage';
 import TamilPage from './Pages/Featured/TamilPage';
 import SearchDataPage from './Pages/SearchData/SearchDataPage';
 import LoginPage from './Pages/Login/LoginPage';
-import ProtectedRoute from './Authenticattion/Protected/ProtectedRoute';
+import ProfilePage from './Pages/Profile/ProfilePage';
+import NewProfilePage from './Pages/Profile/NewProfilePage';
+import CreateProfilePage from './Pages/Profile/CreateProfilePage';
+
 
 
 
@@ -40,7 +43,10 @@ function App() {
     {path :'/search',element:<SearchDataPage/>}
   ]},
   {path:'/AddMovie',element:<AddMovie/>},
-  {path:'/login',element:<LoginPage/>}
+  {path:'/login',element:<LoginPage/>},
+  {path:'/profiles',element:<ProfilePage/>},
+  {path:'/newProfile',element:<NewProfilePage/>},
+  {path:'/createProfile',element:<CreateProfilePage/>}
  ])
   return (
     <>

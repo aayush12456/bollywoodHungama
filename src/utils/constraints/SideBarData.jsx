@@ -26,5 +26,6 @@ export const SidebarData=[
     },
     {
    id:'6',auth:'SignOut',image:''
-    }
+    },
+    
 ]

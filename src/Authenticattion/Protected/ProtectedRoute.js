@@ -1,4 +1,3 @@
-// ProtectedRoute.js
 import { useState, useEffect } from 'react';
 import { Navigate } from 'react-router-dom';
 import { onAuthStateChanged } from 'firebase/auth';
@@ -22,7 +21,10 @@ const ProtectedRoute = ({ children }) => {
       // Redirect to the login page if the user is not authenticated
       return <Navigate to="/login" />;
     }
- 
+   else if (user) {
+      // Redirect to the login page if the user is not authenticated
+      return <Navigate to="" />;
+    }
      return children;
   };
   
