@@ -6,7 +6,7 @@ const AddRomanceData=()=>{
 return (
     <>
     <h4 className='text-white headingTitle'>Romance</h4>
- <div className='cardData'>
+ <div className='cardDatas'>
  {
 filterSliceData.romance.map(movie=>{
     return (

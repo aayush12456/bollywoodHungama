@@ -14,7 +14,7 @@
   .cardShow{
     transition: all 0.3s;
     position: relative;
-    
+    cursor: pointer;
   }
   .cardShow:hover{
     transform: scale(1.15);

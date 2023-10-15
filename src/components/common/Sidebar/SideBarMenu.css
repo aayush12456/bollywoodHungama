@@ -44,7 +44,13 @@ display: none;
         font-weight: 400;
         text-align: center;
     }
-
+    .downArrow {
+        filter: brightness(0) invert(1);
+        width: 1.6rem;
+        margin-left:25rem;
+        margin-top: -6rem;
+      }
+    
 }
 @media only screen and (min-width: 500px ) and (max-width:800px) {
     .icon-img{
@@ -58,6 +64,12 @@ display: none;
         font-weight: 400;
         text-align: center;
     }
+    .downArrow {
+        filter: brightness(0) invert(1);
+        width: 1.6rem;
+        margin-left:25rem;
+        margin-top: -6rem;
+      }
 }
 @media only screen and (min-width: 800px ) and (max-width:1000px) {
     .icon-img{
@@ -71,4 +83,10 @@ display: none;
         font-weight: 400;
         text-align: center;
     }
+    .downArrow {
+        filter: brightness(0) invert(1);
+        width: 2rem;
+        margin-left:30rem;
+        margin-top: -6rem;
+      }
 }

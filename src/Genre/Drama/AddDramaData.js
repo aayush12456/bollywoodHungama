@@ -6,7 +6,7 @@ const AddDramaData=()=>{
 return (
     <>
      <h4 className='text-white headingTitle'>Drama</h4>
- <div className='cardData'>
+ <div className='cardDatas'>
  {
 filterSliceData.drama?.map(movie=>{
     return (

@@ -44,9 +44,6 @@ const AddMovieList = ({ movies,index }) => {
   
   return (
     <>
-
-    
-  
       <div 
         
          >

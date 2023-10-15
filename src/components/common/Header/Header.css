@@ -65,6 +65,7 @@
 
 .userAdd{
     margin-left: -6rem;
+    cursor: pointer;
 }
 
  .headerCard{
@@ -105,6 +106,7 @@
 .profileImg{
     width: 2rem;
     height: 2rem;
+    cursor: pointer;
 }
 .cardProfile{
     display: flex;
@@ -184,7 +186,37 @@
        width: 2rem;
     } 
 }
-
+@media only screen and (min-width: 350px ) and (max-width:450px) {
+    .searchbar{
+        width: 38rem;
+        height: 6rem;
+    }.recommendations{
+        margin-left: 9rem;
+        margin-top: 4rem;
+        width: 38rem;
+        font-size: 2rem;
+    }
+    .profileData{
+        display: flex;
+        gap: 1rem;
+        font-size: 2rem;
+        margin-top: 1rem;
+    }
+    .profileImg{
+        width: 2rem;
+        height: 3rem;
+        cursor: pointer;
+        margin-top: 0.6rem;
+    }
+    .cardLogin{
+        position: absolute;
+        margin-left: 50rem;
+        top: 6rem;
+        width: 19rem;
+        gap: 4rem;
+        background-color:#191e25;
+    }
+}
 
 @media only screen and (min-width: 500px ) and (max-width:800px) {
     .headerCard{
@@ -218,8 +250,144 @@
         margin-top: 2rem;
         width: 3rem;
     } 
+   .recommendations{
+        margin-left: 24rem;
+        margin-top: 4rem;
+        width: 58rem;
+        font-size: 3rem;
+    }
+   
 }
-
+@media only screen and (min-width: 500px ) and (max-width:600px) {
+    .profileData{
+        display: flex;
+        gap: 1rem;
+        font-size: 2rem;
+        margin-top: 1rem;
+        margin-left: -12rem;
+    }
+    .profileImg{
+        width: 2rem;
+        height: 3rem;
+        cursor: pointer;
+        margin-top: 0.6rem;
+    }
+    .cardLogin{
+        position: absolute;
+        margin-left: 55rem;
+        top: 6rem;
+        width: 19rem;
+        gap: 4rem;
+        background-color:#191e25;
+    }
+}
+@media only screen and (min-width: 600px ) and (max-width:700px) {
+    .profileData{
+        display: flex;
+        gap: 1rem;
+        font-size: 2rem;
+        margin-top: 1rem;
+        margin-left: -12rem;
+    }
+    .profileImg{
+        width: 2rem;
+        height: 3rem;
+        cursor: pointer;
+        
+    }
+    .cardLogin{
+        position: absolute;
+        margin-left: 69rem;
+        top: 6rem;
+        width: 19rem;
+        gap: 4rem;
+        background-color:#191e25;
+    }
+}
+@media only screen and (min-width: 700px ) and (max-width:800px) {
+    .profileData{
+        display: flex;
+        gap: 1rem;
+        font-size: 3rem;
+        margin-top: 1rem;
+       
+    }
+    .profileText{
+        margin-left: -36rem;
+    }
+    .profileImg{
+        width: 3rem;
+        height: 3rem;
+        cursor: pointer;
+        margin-top: 1rem;
+        
+    }
+    .cardLogin{
+        position: absolute;
+        margin-left: 73rem;
+        top: 6rem;
+        width: 19rem;
+        gap: 4rem;
+        background-color:#191e25;
+    }
+  
+}
+@media only screen and (min-width: 800px ) and (max-width:900px) {
+    .profileData{
+        display: flex;
+        gap: 1rem;
+        font-size: 3rem;
+        margin-top: 1rem;
+       
+    }
+    .profileText{
+        margin-left: -36rem;
+    }
+    .profileImg{
+        width: 3rem;
+        height: 3rem;
+        cursor: pointer;
+        margin-top: 1rem;
+        
+    }
+    .cardLogin{
+        position: absolute;
+        margin-left: 87rem;
+        top: 6rem;
+        width: 19rem;
+        gap: 4rem;
+        background-color:#191e25;
+    }
+  
+}
+@media only screen and (min-width: 900px ) and (max-width:1000px) {
+    .profileData{
+        display: flex;
+        gap: 1rem;
+        font-size: 3rem;
+        margin-top: 1rem;
+       
+    }
+    .profileText{
+        margin-left: -36rem;
+    }
+    .profileImg{
+        width: 3rem;
+        height: 3rem;
+        cursor: pointer;
+        margin-top: 1rem;
+        
+    }
+    .cardLogin{
+        position: absolute;
+        margin-left: 114rem;
+        top: 6rem;
+        width: 19rem;
+        gap: 4rem;
+        background-color:#191e25;
+    }
+  
+}
 @media only screen and (min-width: 800px ) and (max-width:1000px) {
     .headerCard{
         width: 331%;
@@ -252,6 +420,12 @@
         margin-top: 2rem;
         width: 3rem;
     } 
+    .recommendations{
+        margin-left: 24rem;
+        margin-top: 4rem;
+        width: 83rem;
+        font-size: 3rem;
+    }
 }
 @media only screen and (min-width: 1000px ) and (max-width:1350px) {
 .headerCard{
@@ -289,5 +463,10 @@
 @media only screen and (max-width: 1000px) {
     .auth{
         display: none;
+    }
+}
+@media only screen and (min-width: 1000px ) and (max-width:1150px) {
+    .headerCard{
+        width: 145%;
     }
 }

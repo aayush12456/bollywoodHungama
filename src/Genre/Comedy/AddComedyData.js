@@ -7,7 +7,7 @@ const AddComedyData=()=>{
 return (
     <>
  <h4 className='text-white headingTitle'>Comedy</h4>
- <div className='cardData'>
+ <div className='cardDatas'>
  {
 filterSliceData.comedy.map(movie=>{
     return (

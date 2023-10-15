@@ -10,10 +10,11 @@ import { movieData } from '../../../utils/constraints/ShowMovie'
 import { useLocation } from 'react-router-dom'
 import { auth } from '../../../firebase/firebase'
 import { signOut } from 'firebase/auth'
-import profile from '../../../assets/headericons/profile.png'
+import profiles from '../../../assets/profileicons/profile.png'
 import { profileData } from '../../../utils/constraints/ShowProfile'
 import Swal from 'sweetalert2'
 import swal from 'sweetalert'
+import { PassMovieSliceAcions } from '../../../Redux/Slice/PassMovie/PassMovieSlice'
 const Header = () => {
   const dispatch = useDispatch()
   const navigate = useNavigate()
@@ -28,6 +29,7 @@ const Header = () => {
   const [loginData, setLogin] = useState(true)
   const [user, setUser] = useState(false);
   const [arr,setArr]=useState([])
+  const [profile,setProfile]=useState(true)
   const [selectedProfile, setSelectedProfile] = useState("");
   useEffect(() => {
 
@@ -88,6 +90,7 @@ const Header = () => {
   const mobiles = (mobileData) => {
     setMobile(true)
     setUser(!user)
+    setProfile(true)
  setMobileData(mobileData)
   }
   function logOut() {
@@ -141,6 +144,7 @@ const Header = () => {
   }
   const nameData=(profileName)=>{
     setSelectedProfile(profileName)
+    setProfile(false)
     swal({
       text: "Switch to profile Successfully!",
       icon: "success",
@@ -149,6 +153,7 @@ const Header = () => {
   });
     navigate('/')
     console.log('hello world')
+    dispatch(PassMovieSliceAcions.passMovieData(mobileData))
   }
   return (
     <>
@@ -170,7 +175,8 @@ const Header = () => {
             </form>
             <img src={search} className='img-search' />
             
-            {mobileData && loginData && user && <div class="card cardLogin" >
+            {mobileData && loginData && user && profile &&
+             <div class="card cardLogin" >
               <div className='cardProfile'>
                 <div>
                   <h4 className=' profileAccount'>Your Account</h4>
@@ -202,8 +208,8 @@ const Header = () => {
           
           </div>
           <div className='profileData'>
-          <p className='text-white' onClick={()=>mobiles(mobileData)} style={{ cursor: 'pointer' }}>{selectedProfile||mobileData}</p>
-          {mobileData &&<img src={profile} className='profileImg' onClick={()=>mobiles(mobileData)} />}
+          <p className='text-white profileText' onClick={()=>mobiles(mobileData)} style={{ cursor: 'pointer' }}>{selectedProfile||mobileData}</p>
+          {mobileData &&<img src={profiles} className='profileImg' onClick={()=>mobiles(mobileData)} />}
           </div>
         
 

@@ -46,4 +46,92 @@ max-width: 120rem;
         margin-top: 1rem;
         width: 100rem;
     }
+    .container{
+        position: fixed;
+          inset: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: rgba(0, 0, 0, 0.5);
+          backdrop-filter: blur(4px);
+          z-index: 1;
+        max-width: 150rem;
+          
+        }
+}
+@media only screen and (min-width: 600px ) and (max-width:700px) {
+    .video{
+        margin-left: 0rem;
+        margin-top: 1rem;
+        width: 100rem;
+    }
+    .container{
+        position: fixed;
+          inset: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: rgba(0, 0, 0, 0.5);
+          backdrop-filter: blur(4px);
+          z-index: 1;
+        max-width: 150rem;
+          
+        }
+}
+@media only screen and (min-width: 700px ) and (max-width:800px) {
+    .video{
+        margin-left: 0rem;
+        margin-top: 1rem;
+        width: 100rem;
+    }
+    .container{
+        position: fixed;
+          inset: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: rgba(0, 0, 0, 0.5);
+          backdrop-filter: blur(4px);
+          z-index: 1;
+        max-width: 170rem;
+          
+        }
+}
+@media only screen and (min-width: 800px ) and (max-width:900px) {
+    .video{
+        margin-left: 0rem;
+        margin-top: 1rem;
+        width: 100rem;
+    }
+    .container{
+        position: fixed;
+          inset: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: rgba(0, 0, 0, 0.5);
+          backdrop-filter: blur(4px);
+          z-index: 1;
+        max-width: 190rem;
+          
+        }
+}
+@media only screen and (min-width: 900px ) and (max-width:1000px) {
+    .video{
+        margin-left: 0rem;
+        margin-top: 1rem;
+        width: 100rem;
+    }
+    .container{
+        position: fixed;
+          inset: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: rgba(0, 0, 0, 0.5);
+          backdrop-filter: blur(4px);
+          z-index: 1;
+        max-width: 200rem;
+          
+        }
 }

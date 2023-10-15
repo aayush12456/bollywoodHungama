@@ -168,6 +168,99 @@ video::-webkit-media-controls-volume-slider {
 .fade-out {
   animation: fadeOut 0.5s ease forwards;
 }
+@media only screen and (min-width: 350px ) and (max-width:450px) {
+  .fade-container {
+    position: absolute;
+    width: 121rem;
+    margin-left: 0rem;
+    height: 91rem;
+    transition: opacity 0.5s ease;
+    opacity: 1;
+    overflow: hidden;
+  }
+  .contenttitle {
+    padding-left: 5rem;
+    color: #fff;
+    font-weight: 900;
+    z-index: 2;
+    padding-top: 3rem;
+    font-size: 4rem;
+    width: 64rem;
+  }
+  .contentDescription {
+    padding-left: 6rem;
+    padding-top: 2rem;
+    color: #fff;
+    width: 70rem;
+    z-index: 2;
+    line-height: 3.9rem;
+    font-size: 3rem;
+
+  }
+  .contentRating {
+    display: flex;
+    gap: 2rem;
+  
+  }
+  .contentRate {
+display: none;
+  }
+  .contentTime {
+   display: none;
+  }
+  .contentDate {
+ display: none;
+  }
+  .Genres {
+    padding-top: 2rem;
+    color: #999c9f;
+    padding-left: 6rem;
+    z-index: 2;
+    font-size: 3rem;
+    width: 50rem;
+
+  }
+  .premium {
+    padding-top: 1rem;
+    color: #fff;
+    padding-left: 6rem;
+    font-size: 3rem;
+    width: 43rem;
+  }
+  .playButton {
+    width: 13rem;
+    margin-left: 6rem;
+    margin-top: 0.5rem;
+    filter: brightness(0) invert(1);
+    cursor: pointer;
+  }
+  .play {
+    margin-left: 4.5rem;
+    margin-top: 3rem;
+    color: #fff;
+    cursor: pointer;
+    font-size: 4rem;
+  }
+.gradient-overlay {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70%;
+  background: linear-gradient(
+    to top ,left,
+    rgba(0, 0, 0, 0.9) 20%,
+    transparent 80%
+  );
+
+  z-index: 2; /* Make sure the gradient is above the image */
+}
+.imgButton{
+  position:absolute;
+  right: -68rem;
+}
+}
 @media only screen and (min-width: 500px ) and (max-width:600px) {
   .fade-container {
     position: absolute;
@@ -197,6 +290,14 @@ video::-webkit-media-controls-volume-slider {
     font-size: 3rem;
 
   }
+  .imgButton {
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+   left: 30rem;
+    top: 2rem;
+    filter: brightness(0) invert(1);
+}
   .contentRating {
     display: flex;
     gap: 2rem;

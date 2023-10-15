@@ -6,7 +6,7 @@ const AddTamilData=()=>{
 return (
     <>
      <h4 className='text-white headingTitle'>Tamil</h4>
- <div className='cardData'>
+ <div className='cardDatas'>
  {
 filterSliceData.tamil.map(movie=>{
     return (

@@ -9,7 +9,7 @@
    /* margin-top: -20rem; */
    z-index: 2;
    position: absolute;
-   top: 14rem;
+   top: 15rem;
    left: 92rem;
    cursor: pointer;
   }
@@ -19,7 +19,7 @@
    /* margin-top: -20rem; */
    z-index: 2;
    position: absolute;
-   top: 14rem;
+   top: 15rem;
    left: 19.5rem;
    cursor: pointer;
    width: 1rem;
@@ -27,7 +27,7 @@
   .rightArrow1{
 position: absolute;
 left: 92rem;
-margin-top: -7rem;
+margin-top: 4rem;
     filter: brightness(0) invert(1);
     z-index: 2;
     cursor: pointer;
@@ -37,7 +37,7 @@ margin-top: -7rem;
    z-index: 2;
   position: absolute;
   left: 19rem;
-  margin-top: -7rem;
+  margin-top: 4.5rem;
    cursor: pointer;
    width: 1rem;
   }
@@ -55,7 +55,7 @@ margin-top: -7rem;
 .rightArrow2{
     position: absolute;
 left: 92rem;
-  margin-top: -7rem;
+  margin-top: 4rem;
   filter: brightness(0) invert(1);
   z-index: 2;
   cursor: pointer;
@@ -67,14 +67,14 @@ left: 92rem;
  z-index: 2;
 position: absolute;
 left: 19rem;
-margin-top: -7rem;
+margin-top: 4.5rem;
  cursor: pointer;
  width: 1rem;
 }
 .rightArrow3{
   position: absolute;
 left: 92rem;
-margin-top: -7rem;
+margin-top: 4.5rem;
 filter: brightness(0) invert(1);
 z-index: 2;
 cursor: pointer;
@@ -86,7 +86,7 @@ filter: brightness(0) invert(1);
 z-index: 2;
 position: absolute;
 left: 19rem;
-margin-top: -7rem;
+margin-top: 4.5rem;
 cursor: pointer;
 width: 1rem;
 }
@@ -116,6 +116,109 @@ width: 1rem;
        cursor: pointer;
        width: 4rem;
       }
+  }
+  @media only screen and (min-width: 350px ) and (max-width:450px) {
+    .cardData{
+      display: flex;
+      gap: 1rem;
+      margin-left: 2rem;
+      margin-top: 3rem;
+  }
+  .headingTitle1{
+    padding-top: 2rem;
+    font-size:3rem;
+    margin-left: -16rem;
+    width: 44rem;
+  }
+  .headingTitle{
+    width: 50rem;
+    font-size: 3rem;
+    margin-left: -16rem;
+  }
+  .headingTitle2{
+    padding-top: 2rem;
+    font-size: 3rem;
+    padding-left: 3rem;
+    width: 44rem;
+  }
+  .headingTitle3{
+    padding-top: 2rem;
+    font-size: 3rem;
+    padding-left: 3rem;
+    width: 44rem;
+  }
+  .rightArrow{
+      filter: brightness(0) invert(1);
+     z-index: 2;
+     position: absolute;
+     top: 25rem;
+     left: 105rem;
+     cursor: pointer;
+     width: 5rem;
+    }
+    .leftArrow{
+      filter: brightness(0) invert(1);
+     z-index: 2;
+     position: absolute;
+     top: 26rem;
+     left: 2rem;
+     cursor: pointer;
+     width: 4rem;
+    }
+    .rightArrow1{
+      filter: brightness(0) invert(1);
+     z-index: 2;
+     position: absolute;
+     top: 43rem;
+     left: 105rem;
+     cursor: pointer;
+     width: 5rem;
+    }
+    .leftArrow1{
+      filter: brightness(0) invert(1);
+     z-index: 2;
+     position: absolute;
+     top: 43rem;
+     left: 2rem;
+     cursor: pointer;
+     width: 4rem;
+    }
+    .rightArrow2{
+      filter: brightness(0) invert(1);
+     z-index: 2;
+     position: absolute;
+     top: 65rem;
+     left: 105rem;
+     cursor: pointer;
+     width: 5rem;
+    }
+    .leftArrow2{
+      filter: brightness(0) invert(1);
+     z-index: 2;
+     position: absolute;
+     top: 65rem;
+     left: 2rem;
+     cursor: pointer;
+     width: 4rem;
+    }
+    .rightArrow3{
+      filter: brightness(0) invert(1);
+     z-index: 2;
+     position: absolute;
+     top:87rem;
+     left: 105rem;
+     cursor: pointer;
+     width: 5rem;
+    }
+    .leftArrow3{
+      filter: brightness(0) invert(1);
+     z-index: 2;
+     position: absolute;
+     top:87rem;
+     left: 2rem;
+     cursor: pointer;
+     width: 4rem;
+    }
   }
   @media only screen and (min-width: 500px ) and (max-width:600px) {
     .cardData{
@@ -216,7 +319,7 @@ width: 1rem;
   @media only screen and (min-width: 600px ) and (max-width:700px) {
     .cardData{
         display: flex;
-        gap: 1rem;
+        gap: 2rem;
         margin-left: 2rem;
     }
     .rightArrow{
@@ -225,7 +328,7 @@ width: 1rem;
         z-index: 2;
         position: absolute;
         top: 27rem;
-        left: 124rem;
+        left: 129rem;
   
         cursor: pointer;
         width: 5rem;
@@ -244,8 +347,8 @@ width: 1rem;
         filter: brightness(0) invert(1);
        z-index: 2;
        position: absolute;
-       top: 50rem;
-       left: 123rem;
+       top: 59rem;
+       left: 129rem;
        cursor: pointer;
        width: 5rem;
       }
@@ -262,8 +365,8 @@ width: 1rem;
         filter: brightness(0) invert(1);
        z-index: 2;
        position: absolute;
-       top: 80rem;
-       left: 123rem;
+       top: 90rem;
+       left: 129rem;
        cursor: pointer;
        width: 5rem;
       }
@@ -271,7 +374,7 @@ width: 1rem;
         filter: brightness(0) invert(1);
        z-index: 2;
        position: absolute;
-       top: 80rem;
+       top: 90rem;
        left: 2rem;
        cursor: pointer;
        width: 4rem;
@@ -280,8 +383,8 @@ width: 1rem;
         filter: brightness(0) invert(1);
        z-index: 2;
        position: absolute;
-       top:110rem;
-       left: 123rem;
+       top:119rem;
+       left: 129rem;
        cursor: pointer;
        width: 5rem;
       }
@@ -289,15 +392,19 @@ width: 1rem;
         filter: brightness(0) invert(1);
        z-index: 2;
        position: absolute;
-       top:110rem;
+       top:119rem;
        left: 2rem;
        cursor: pointer;
        width: 4rem;
       }
+    .headingTitle{
+    margin-left: -17rem;
+    }
        .headingTitle1{
       padding-top: 2rem;
       font-size: 3rem;
       padding-left: 3rem;
+      margin-left: -17rem;
     }
     .headingTitle2{
       padding-top: 2rem;
@@ -341,7 +448,7 @@ width: 1rem;
         filter: brightness(0) invert(1);
        z-index: 2;
        position: absolute;
-       top: 60rem;
+       top:71rem;
        left: 142rem;
        cursor: pointer;
        width: 5rem;
@@ -350,7 +457,7 @@ width: 1rem;
         filter: brightness(0) invert(1);
        z-index: 2;
        position: absolute;
-       top: 60rem;
+       top: 71rem;
        left: 2rem;
        cursor: pointer;
        width: 4rem;
@@ -359,7 +466,7 @@ width: 1rem;
         filter: brightness(0) invert(1);
        z-index: 2;
        position: absolute;
-       top: 92rem;
+       top: 104rem;
        left: 142rem;
        cursor: pointer;
        width: 5rem;
@@ -368,7 +475,7 @@ width: 1rem;
         filter: brightness(0) invert(1);
        z-index: 2;
        position: absolute;
-       top: 92rem;
+       top: 104rem;
        left: 2rem;
        cursor: pointer;
        width: 4rem;
@@ -377,7 +484,7 @@ width: 1rem;
         filter: brightness(0) invert(1);
        z-index: 2;
        position: absolute;
-       top:125rem;
+       top:137rem;
        left: 142rem;
        cursor: pointer;
        width: 5rem;
@@ -386,15 +493,18 @@ width: 1rem;
         filter: brightness(0) invert(1);
        z-index: 2;
        position: absolute;
-       top:125rem;
+       top:137rem;
        left: 2rem;
        cursor: pointer;
        width: 4rem;
       }
+      .headingTitle{
+        margin-left: -16rem;
+      }
        .headingTitle1{
       padding-top: 2rem;
       font-size: 3rem;
-      padding-left: 3rem;
+      margin-left: -16rem;
     }
     .headingTitle2{
       padding-top: 2rem;
@@ -410,7 +520,7 @@ width: 1rem;
   @media only screen and (min-width: 800px ) and (max-width:900px) {
     .cardData{
         display: flex;
-        gap: 1rem;
+        gap: 3rem;
         margin-left: 4rem;
         margin-top: 2rem;
     }
@@ -418,8 +528,8 @@ width: 1rem;
         filter: brightness(0) invert(1);
         z-index: 2;
         position: absolute;
-        top: 30rem;
-        left: 153rem;
+        top: 32rem;
+        left: 157rem;
   
         cursor: pointer;
         width: 5rem;
@@ -428,7 +538,7 @@ width: 1rem;
         filter: brightness(0) invert(1);
        z-index: 2;
        position: absolute;
-       top: 30rem;
+       top: 32rem;
        left: 4rem;
        cursor: pointer;
        width: 4rem;
@@ -437,8 +547,8 @@ width: 1rem;
         filter: brightness(0) invert(1);
        z-index: 2;
        position: absolute;
-       top: 63rem;
-       left: 153rem;
+       top: 72rem;
+       left: 157rem;
        cursor: pointer;
        width: 5rem;
       }
@@ -446,8 +556,8 @@ width: 1rem;
         filter: brightness(0) invert(1);
        z-index: 2;
        position: absolute;
-       top: 63rem;
-       left: 2rem;
+       top: 72rem;
+       left: 6rem;
        cursor: pointer;
        width: 4rem;
       }
@@ -455,8 +565,8 @@ width: 1rem;
         filter: brightness(0) invert(1);
        z-index: 2;
        position: absolute;
-       top: 96rem;
-       left: 153rem;
+       top: 109rem;
+       left: 157rem;
        cursor: pointer;
        width: 5rem;
       }
@@ -464,8 +574,8 @@ width: 1rem;
         filter: brightness(0) invert(1);
        z-index: 2;
        position: absolute;
-       top: 96rem;
-       left: 2rem;
+       top: 109rem;
+       left: 6rem;
        cursor: pointer;
        width: 4rem;
       }
@@ -473,8 +583,8 @@ width: 1rem;
         filter: brightness(0) invert(1);
        z-index: 2;
        position: absolute;
-       top:132rem;
-       left: 153rem;
+       top:145rem;
+       left: 157rem;
        cursor: pointer;
        width: 5rem;
       }
@@ -482,15 +592,18 @@ width: 1rem;
         filter: brightness(0) invert(1);
        z-index: 2;
        position: absolute;
-       top:132rem;
-       left: 2rem;
+       top:145rem;
+       left: 6rem;
        cursor: pointer;
        width: 4rem;
+      }
+      .headingTitle{
+        margin-left: -15rem;
       }
        .headingTitle1{
       padding-top: 2rem;
       font-size: 4rem;
-      padding-left: 3rem;
+      margin-left: -15rem;
     }
     .headingTitle2{
       padding-top: 2rem;
@@ -506,7 +619,7 @@ width: 1rem;
   @media only screen and (min-width: 900px ) and (max-width:1000px) {
     .cardData{
         display: flex;
-        gap: 1rem;
+        gap: 1.5rem;
         margin-left: 4rem;
     }
     .rightArrow{
@@ -534,8 +647,8 @@ width: 1rem;
         filter: brightness(0) invert(1);
        z-index: 2;
        position: absolute;
-       top: 63rem;
-       left: 153rem;
+       top: 72rem;
+       left: 187rem;
        cursor: pointer;
        width: 5rem;
       }
@@ -543,8 +656,8 @@ width: 1rem;
         filter: brightness(0) invert(1);
        z-index: 2;
        position: absolute;
-       top: 63rem;
-       left: 2rem;
+       top: 74rem;
+       left: 6rem;
        cursor: pointer;
        width: 4rem;
       }
@@ -552,8 +665,8 @@ width: 1rem;
         filter: brightness(0) invert(1);
        z-index: 2;
        position: absolute;
-       top: 96rem;
-       left: 187rem;
+       top: 107rem;
+       left: 188rem;
        cursor: pointer;
        width: 5rem;
       }
@@ -561,8 +674,8 @@ width: 1rem;
         filter: brightness(0) invert(1);
        z-index: 2;
        position: absolute;
-       top: 96rem;
-       left: 2rem;
+       top: 107rem;
+       left: 6rem;
        cursor: pointer;
        width: 4rem;
       }
@@ -570,8 +683,8 @@ width: 1rem;
         filter: brightness(0) invert(1);
        z-index: 2;
        position: absolute;
-       top:132rem;
-       left: 187rem;
+       top:142rem;
+       left: 188rem;
        cursor: pointer;
        width: 5rem;
       }
@@ -579,15 +692,18 @@ width: 1rem;
         filter: brightness(0) invert(1);
        z-index: 2;
        position: absolute;
-       top:132rem;
-       left: 2rem;
+       top:142rem;
+       left: 6rem;
        cursor: pointer;
        width: 4rem;
+      }
+      .headingTitle{
+        margin-left: -15rem;
       }
        .headingTitle1{
       padding-top: 2rem;
       font-size: 4rem;
-      padding-left: 3rem;
+    margin-left: -15rem;
     }
     .headingTitle2{
       padding-top: 2rem;

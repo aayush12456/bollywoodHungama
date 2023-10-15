@@ -16,7 +16,6 @@ const Login = () => {
   const navigate = useNavigate();
 
   function setUpRecaptcha(mobile) {
-    debugger
     const recaptchaVerifier = new RecaptchaVerifier(auth, 'recaptcha-container', {});
     recaptchaVerifier.render();
     return signInWithPhoneNumber(auth, mobile, recaptchaVerifier);
@@ -64,7 +63,7 @@ const Login = () => {
 
   return (
     <>
-      <div>
+      <div className='backImage'  >
         {!flag && (
           <form onSubmit={getOtp}>
             <div className='mobileInput'>
@@ -74,15 +73,15 @@ const Login = () => {
                 value={mobile}
                 onChange={setMobile}
                 defaultCountry='IN'
-                className="number"
-      
+                className="PhoneInputInput"
+                
               />
               
             <div id="recaptcha-container"></div>
             </div>
             {mobile &&  mobile.trim().length === 13 && (
   <div id="button">
-    <button type="submit" className="btn btn-primary">
+    <button type="submit" className="btn btn-primary" id='buttons'>
       Send OTP
     </button>
   </div>
@@ -98,6 +97,7 @@ const Login = () => {
               className="form-control1"
               placeholder="Enter OTP"
               onChange={(e) => setOtp(e.target.value)}
+              
             />
             {error ?<p className='otp'>Please enter valid otp</p>:null}
           </div>
@@ -107,15 +107,17 @@ const Login = () => {
               type="button"
               className="btn btn-secondary"
               onClick={()=>setFlag(false)}
+              id='cancel'
             >
               Cancel
             </button>
             &nbsp;
-            <button type="submit" className="btn btn-primary">
+            <button type="submit" className="btn btn-primary" id='verify'>
               Verify
             </button>
           </div>
         </form>}
+       
       </div>
     </>
   );

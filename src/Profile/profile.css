@@ -29,3 +29,284 @@
     display: flex;
     gap: 2rem;
 }
+.deleteImg{
+    width: 1.2rem;
+    height: 1.2rem;
+    filter: brightness(0) invert(1);
+    margin-top: 4.7rem;
+    cursor: pointer;
+}
+@media only screen and (min-width: 350px ) and (max-width:500px) {
+    .watch{
+        font-size: 4rem;
+        font-weight: bold;
+        padding-top: 4rem;
+    }
+    .myProfileImg{
+        width: 9rem;
+        height: 8rem;
+    }
+    .profileData1{
+        display: flex;
+        gap: 2rem;
+        margin-left: 25rem;
+        margin-top: 2rem;
+    }
+    .myProfileImg1{
+        width: 9rem;
+        height: 8rem;
+    }
+    .profileData2{
+        padding-left: 1.5rem;
+        font-size: 2.6rem;
+    }
+    .phoneContent{
+        font-size: 2.6rem;
+        margin-left: -7rem;
+    }
+    .AddNew{
+        font-size:2.6rem;
+    }
+    .addnewImg{
+        filter: brightness(0) invert(1);
+        width: 9rem;
+        height:8rem ;
+        cursor: pointer;
+    }
+    .deleteImg{
+        width: 3.2rem;
+        height:3.2rem;
+        filter: brightness(0) invert(1);
+        margin-top: 4.7rem;
+        cursor: pointer;
+    }
+}
+@media only screen and (min-width: 500px ) and (max-width:600px) {
+    .watch{
+        font-size: 4rem;
+        font-weight: bold;
+        padding-top: 4rem;
+    }
+    .myProfileImg{
+        width: 9rem;
+        height: 8rem;
+    }
+    .profileData1{
+        display: flex;
+        gap: 2rem;
+        margin-left: 25rem;
+        margin-top: 2rem;
+    }
+    .myProfileImg1{
+        width: 9rem;
+        height: 8rem;
+    }
+    .profileData2{
+        padding-left: 1.5rem;
+        font-size: 2.6rem;
+    }
+    .phoneContent{
+        font-size: 2.6rem;
+        margin-left: -7rem;
+    }
+    .AddNew{
+        font-size:2.6rem;
+    }
+    .addnewImg{
+        filter: brightness(0) invert(1);
+        width: 9rem;
+        height:8rem ;
+        cursor: pointer;
+    }
+    .deleteImg{
+        width: 3.2rem;
+        height:3.2rem;
+        filter: brightness(0) invert(1);
+        margin-top: 4.7rem;
+        cursor: pointer;
+    }
+}
+@media only screen and (min-width: 600px ) and (max-width:700px) {
+    .watch{
+        font-size: 4rem;
+        font-weight: bold;
+        padding-top: 4rem;
+    }
+    .myProfileImg{
+        width: 12rem;
+        height: 10rem;
+    }
+    .profileData1{
+        display: flex;
+        gap: 3rem;
+        margin-left: 36rem;
+        margin-top: 2rem;
+    }
+    .myProfileImg1{
+        width: 12rem;
+        height: 10rem;
+    }
+    .profileData2{
+        padding-left: 1.5rem;
+        font-size: 3rem;
+    }
+    .phoneContent{
+        font-size: 3rem;
+        margin-left: -7rem;
+    }
+    .AddNew{
+        font-size:3rem;
+    }
+    .addnewImg{
+        filter: brightness(0) invert(1);
+        width: 12rem;
+        height:10rem ;
+        cursor: pointer;
+    }
+    .deleteImg{
+        width: 3.2rem;
+        height:3.2rem;
+        filter: brightness(0) invert(1);
+        margin-top: 4.7rem;
+        cursor: pointer;
+    }
+   
+}
+@media only screen and (min-width: 700px ) and (max-width:800px) {
+    .watch{
+        font-size: 4rem;
+        font-weight: bold;
+        padding-top: 4rem;
+    }
+    .myProfileImg{
+        width: 12rem;
+        height: 10rem;
+    }
+    .profileData1{
+        display: flex;
+        gap: 3rem;
+        margin-left: 41rem;
+        margin-top: 2rem;
+    }
+    .myProfileImg1{
+        width: 12rem;
+        height: 10rem;
+    }
+    .profileData2{
+        padding-left: 1.5rem;
+        font-size: 3rem;
+    }
+    .phoneContent{
+        font-size: 3rem;
+        margin-left: -7rem;
+    }
+    .AddNew{
+        font-size:3rem;
+    }
+    .addnewImg{
+        filter: brightness(0) invert(1);
+        width: 12rem;
+        height:10rem ;
+        cursor: pointer;
+    }
+    .deleteImg{
+        width: 3.2rem;
+        height:3.2rem;
+        filter: brightness(0) invert(1);
+        margin-top: 4.7rem;
+        cursor: pointer;
+    }
+   
+}
+@media only screen and (min-width: 800px ) and (max-width:900px) {
+    .watch{
+        font-size: 4rem;
+        font-weight: bold;
+        padding-top: 4rem;
+    }
+    .myProfileImg{
+        width: 12rem;
+        height: 10rem;
+    }
+    .profileData1{
+        display: flex;
+        gap: 3rem;
+        margin-left: 44rem;
+        margin-top: 2rem;
+    }
+    .myProfileImg1{
+        width: 12rem;
+        height: 10rem;
+    }
+    .profileData2{
+        padding-left: 1.5rem;
+        font-size: 3rem;
+    }
+    .phoneContent{
+        font-size: 3rem;
+        margin-left: -7rem;
+    }
+    .AddNew{
+        font-size:3rem;
+    }
+    .addnewImg{
+        filter: brightness(0) invert(1);
+        width: 12rem;
+        height:10rem ;
+        cursor: pointer;
+    }
+    .deleteImg{
+        width: 3.2rem;
+        height:3.2rem;
+        filter: brightness(0) invert(1);
+        margin-top: 4.7rem;
+        cursor: pointer;
+    }
+   
+}
+@media only screen and (min-width: 900px ) and (max-width:1000px) {
+    .watch{
+        font-size: 4rem;
+        font-weight: bold;
+        padding-top: 4rem;
+    }
+    .myProfileImg{
+        width: 12rem;
+        height: 10rem;
+    }
+    .profileData1{
+        display: flex;
+        gap: 3rem;
+        margin-left: 54rem;
+        margin-top: 2rem;
+    }
+    .myProfileImg1{
+        width: 12rem;
+        height: 10rem;
+    }
+    .profileData2{
+        padding-left: 1.5rem;
+        font-size: 3rem;
+    }
+    .phoneContent{
+        font-size: 3rem;
+        margin-left: -7rem;
+    }
+    .AddNew{
+        font-size:3rem;
+    }
+    .addnewImg{
+        filter: brightness(0) invert(1);
+        width: 12rem;
+        height:10rem ;
+        cursor: pointer;
+    }
+    .deleteImg{
+        width: 3.2rem;
+        height:3.2rem;
+        filter: brightness(0) invert(1);
+        margin-top: 4.7rem;
+        cursor: pointer;
+    }
+   
+}

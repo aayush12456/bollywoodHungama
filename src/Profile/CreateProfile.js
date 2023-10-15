@@ -8,6 +8,7 @@ import swal from 'sweetalert';
 const CreateProfile=()=>{
     const [input,setInput]=useState(' ')
     const [inputObj,setInputObj]=useState({})
+    const[id,setId]=useState(0)
     const dispatch=useDispatch()
     const navigate=useNavigate()
     const profileInput=(event)=>{
@@ -15,8 +16,10 @@ setInput(event.target.value)
     }
     const formSubmit=(e)=>{
     e.preventDefault()
+    setId(id+1)
     const obj={
-        name:input
+        name:input,
+        id:id
     }
     setInput(' ')
     setInputObj(obj)
@@ -43,8 +46,8 @@ return (
     <input type="text"  onChange={profileInput} class="profileField mt-4"  autoComplete='off'  placeholder="Enter Name" value={input}/>
   </div>
   <div className='createButtons '>
-    <button type="button" class="btn btn-secondary" onClick={cancel}>Cancel</button>
-    <button type="submit" class="btn btn-primary" >Save Changes</button>
+    <button type="button" class="btn btn-secondary " id='cancelButton' onClick={cancel}>Cancel</button>
+    <button type="submit" class="btn btn-primary" id='saveButton' >Save Changes</button>
     </div>
         </form>
     </div>
