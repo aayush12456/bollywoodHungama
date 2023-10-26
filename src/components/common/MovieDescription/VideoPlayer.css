@@ -785,3 +785,14 @@ display: none;
   }
   
 }
+@media only screen and (min-width: 1550px ) and (max-width:2500px) {
+  .fade-container {
+    position: absolute;
+    width: 95rem;
+    margin-left: 18rem;
+    height: 100%;
+    transition: opacity 0.5s ease;
+    opacity: 1;
+    overflow: hidden;
+  }
+}

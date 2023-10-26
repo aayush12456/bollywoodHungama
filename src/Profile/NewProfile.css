@@ -200,3 +200,29 @@
        font-size: 3rem;
     }
 }
+@media only screen and (min-width: 1700px ) and (max-width:2500px) {
+    .profileButton{
+        margin-left: 44rem;
+       width: 25rem;
+       height: 3rem;
+    }
+    .secondUser{
+        padding-left: 38rem;
+     }
+     .cancelButton{
+        margin-left: 51.5rem;
+       width: 7rem;
+       height: 3rem;
+       margin-top: 1rem;
+    }
+}
+@media only screen and (min-width: 1550px ) and (max-width:1700px) {
+    .profileButton{
+        margin-left: 36rem;
+       width: 25rem;
+       height: 3rem;
+    }
+    .secondUser{
+        padding-left: 33rem;
+     }
+}

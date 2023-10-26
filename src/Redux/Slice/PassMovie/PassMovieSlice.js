@@ -7,7 +7,7 @@ const PassMovieSlice=createSlice({
     reducers:{
         passMovieData(state,action){
         state.passMovie=action.payload
-        console.log(state.passMovie)
+        // console.log(state.passMovie)
         }
     }
 })

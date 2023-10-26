@@ -470,3 +470,23 @@
         width: 145%;
     }
 }
+@media only screen and (min-width: 1700px ) and (max-width:2500px) {
+    .cardLogin{
+        position: absolute;
+        margin-left: 66rem;
+        top: 3rem;
+        width: 19rem;
+        gap: 4rem;
+        background-color:#191e25;
+    }
+}
+@media only screen and (min-width: 1550px ) and (max-width:1700px) {
+    .cardLogin{
+        position: absolute;
+        margin-left: 60rem;
+        top: 3rem;
+        width: 19rem;
+        gap: 4rem;
+        background-color:#191e25;
+    }
+}

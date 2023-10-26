@@ -23,8 +23,8 @@ const MovieContent = () => {
     const [showVideo, setShowVideo] = useState(false);
     const [videoNotAvailable, setVideoNotAvailable] = useState(false);
 
-    console.log(finalMovieData);
-    
+    // console.log(finalMovieData);
+
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -100,7 +100,7 @@ const MovieContent = () => {
                     )}
                 </div>
                 <div className={`fade-container ${showVideo ? "fade-in" : "fade-out"}`}>
-                    {!isCompleted && showVideo && !videoNotAvailable ?  
+                    {!isCompleted && showVideo && !videoNotAvailable ?
                         <video
                             controls
                             autoPlay
@@ -130,9 +130,9 @@ const MovieContent = () => {
                     <div className="movieDescription">
                         {!isCompleted && showVideo && !videoNotAvailable && (
                             <div className="button">
-                                <button className="videoBUtton "  id="button" onClick={handleToggleMute}>
+                                <button className="videoBUtton " id="button" onClick={handleToggleMute}>
                                     {isMuted || !isPlaying ? (
-                                        <img className="imgButton" src={mutesoundicon}   alt="Muted" />
+                                        <img className="imgButton" src={mutesoundicon} alt="Muted" />
                                     ) : (
                                         <img className="imgButton" src={soundicon} alt="Unmuted" />
                                     )}
@@ -149,8 +149,8 @@ const MovieContent = () => {
                         <h5 className="Genres">{finalMovieData.Genres}</h5>
                         <h5 className="premium">included with premium</h5>
                         <div className="button">
-                            <img src={playButton} className="playButton"  onClick={playVideo}/>
-                            <h5 className="play" onClick={()=>playVideo(finalMovieData)}>Play</h5>
+                            <img src={playButton} className="playButton" onClick={playVideo} />
+                            <h5 className="play" onClick={() => playVideo(finalMovieData)}>Play</h5>
                         </div>
                     </div>
                 </div>

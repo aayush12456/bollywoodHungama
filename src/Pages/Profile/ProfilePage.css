@@ -6,3 +6,10 @@
 .footerDiv{
     background-color: #00050d;
 }
+@media only screen and (min-width: 1600px ) and (max-width:2500px) {
+    .footerDiv{
+        background-color: #00050d;
+        margin-top: 14.2rem;
+        
+    }
+}

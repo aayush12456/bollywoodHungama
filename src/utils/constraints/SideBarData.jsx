@@ -7,6 +7,7 @@ import upArrow from '../../assets/sidebaricons/upArrow.svg'
 import leftArrow from '../../assets/sidebaricons/leftArrow.svg'
 import rightArrow from '../../assets/sidebaricons/rightArrow.svg'
 import downArrow from '../../assets/sidebaricons/downArrow.svg'
+
 export const SidebarData=[
     {
         id:'1',title:'Home',image:home

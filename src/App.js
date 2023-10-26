@@ -1,6 +1,6 @@
 
 import './App.css';
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { RouterProvider, createBrowserRouter,Navigate } from 'react-router-dom';
 import Dashboard from './Pages/Dashboard/DashboardPage';
 import AddMovie from './AddMovie/AddMovie';
 import ShowVideo from './Pages/Video/showVideo';
@@ -17,9 +17,8 @@ import LoginPage from './Pages/Login/LoginPage';
 import ProfilePage from './Pages/Profile/ProfilePage';
 import NewProfilePage from './Pages/Profile/NewProfilePage';
 import CreateProfilePage from './Pages/Profile/CreateProfilePage';
-
-
-
+import DownloadPage from './Pages/Download/DownloadPage';
+import StoreDataPage from './Pages/storeData/storeDataPage';
 
 function App() {
   const videoSelector=useSelector(state=>state.passMovie.passMovie)
@@ -32,6 +31,10 @@ function App() {
   {path:'',
   element:<Dashboard/>,
   children:[
+    {
+      
+      path:'/',element: <Navigate to='/Home'  />
+    },
     {path:'',element:<MoviePage/>},
     {path: '/movie',element:<MovieContentPage/>},
     {path: `/movie/video/${movieId}`,element:<ShowVideo/>},
@@ -40,9 +43,15 @@ function App() {
     {path :'/genre/drama',element:<DramaPage/>},
     {path :'/genre/kids',element:<KidsPage/>},
     {path :'/feature/tamil',element:<TamilPage/>},
-    {path :'/search',element:<SearchDataPage/>}
+    {path :'/search',element:<SearchDataPage/>},
+    {path:'/AddMovie',element:<AddMovie/>},
+    {path:'/Download',element:<DownloadPage/>},
+    {path:'/Store',element:<StoreDataPage/>},
+    {path:'/Categories',element:<MoviePage/>},
+    {path:'/Home',element:<MoviePage/>},
+
   ]},
-  {path:'/AddMovie',element:<AddMovie/>},
+
   {path:'/login',element:<LoginPage/>},
   {path:'/profiles',element:<ProfilePage/>},
   {path:'/newProfile',element:<NewProfilePage/>},

@@ -2,9 +2,12 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     gap: 2rem;
+    
 }
 .movieCard{
     width: 70rem;
+    position: absolute;
+    left: 20rem;
 }
 .buttons{
     position: relative;

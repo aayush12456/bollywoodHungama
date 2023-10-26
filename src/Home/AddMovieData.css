@@ -517,7 +517,7 @@ width: 1rem;
       padding-left: 3rem;
     }
   }
-  @media only screen and (min-width: 800px ) and (max-width:900px) {
+ @media only screen and (min-width: 800px ) and (max-width:900px) {
     .cardData{
         display: flex;
         gap: 3rem;
@@ -547,7 +547,7 @@ width: 1rem;
         filter: brightness(0) invert(1);
        z-index: 2;
        position: absolute;
-       top: 72rem;
+       top: 64rem;
        left: 157rem;
        cursor: pointer;
        width: 5rem;
@@ -556,7 +556,7 @@ width: 1rem;
         filter: brightness(0) invert(1);
        z-index: 2;
        position: absolute;
-       top: 72rem;
+       top: 64rem;
        left: 6rem;
        cursor: pointer;
        width: 4rem;
@@ -565,7 +565,7 @@ width: 1rem;
         filter: brightness(0) invert(1);
        z-index: 2;
        position: absolute;
-       top: 109rem;
+       top: 99rem;
        left: 157rem;
        cursor: pointer;
        width: 5rem;
@@ -574,7 +574,7 @@ width: 1rem;
         filter: brightness(0) invert(1);
        z-index: 2;
        position: absolute;
-       top: 109rem;
+       top: 99rem;
        left: 6rem;
        cursor: pointer;
        width: 4rem;
@@ -583,8 +583,8 @@ width: 1rem;
         filter: brightness(0) invert(1);
        z-index: 2;
        position: absolute;
-       top:145rem;
-       left: 157rem;
+       top:136rem;
+       left: 187rem;
        cursor: pointer;
        width: 5rem;
       }
@@ -684,7 +684,7 @@ width: 1rem;
        z-index: 2;
        position: absolute;
        top:142rem;
-       left: 188rem;
+       left: 168rem;
        cursor: pointer;
        width: 5rem;
       }
@@ -715,4 +715,85 @@ width: 1rem;
       font-size: 4rem;
       padding-left: 3rem;
     }
+  }
+  @media only screen and (min-width: 1600px ) and (max-width:2500px) {
+    .cardData{
+      display: flex;
+      gap: 5.3rem;
+      margin-left: 20rem;
+  }
+  .rightArrow{
+    filter: brightness(0) invert(1);
+
+   z-index: 2;
+   position: absolute;
+   top: 15.5rem;
+   left: 109rem;
+   cursor: pointer;
+  }
+  .leftArrow{
+    filter: brightness(0) invert(1);
+
+   z-index: 2;
+   position: absolute;
+   top: 15.5rem;
+   left: 21rem;
+   cursor: pointer;
+   width: 1rem;
+  }
+  .rightArrow1{
+    position: absolute;
+    left: 109.2rem;
+    margin-top: 5rem;
+        filter: brightness(0) invert(1);
+        z-index: 2;
+        cursor: pointer;
+      }
+      .leftArrow1{
+        filter: brightness(0) invert(1);
+       z-index: 2;
+      position: absolute;
+      left: 21rem;
+      margin-top: 4.5rem;
+       cursor: pointer;
+       width: 1rem;
+      }
+      .rightArrow2{
+        position: absolute;
+    left: 109.2rem;
+      margin-top: 4.5rem;
+      filter: brightness(0) invert(1);
+      z-index: 2;
+      cursor: pointer;
+    
+    }
+    .leftArrow2{
+      filter: brightness(0) invert(1);
+
+     z-index: 2;
+    position: absolute;
+    left: 21rem;
+    margin-top: 4.5rem;
+     cursor: pointer;
+     width: 1rem;
+    }
+  }
+  .rightArrow3{
+    position: absolute;
+  left: 92rem;
+  margin-top: 4.5rem;
+  filter: brightness(0) invert(1);
+  z-index: 2;
+  cursor: pointer;
+  
+  }
+  .leftArrow3{
+  filter: brightness(0) invert(1);
+
+  z-index: 2;
+  position: absolute;
+  left: 21rem;
+  margin-top: 4.5rem;
+  cursor: pointer;
+  width: 1rem;
   }

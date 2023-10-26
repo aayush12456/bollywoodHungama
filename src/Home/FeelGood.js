@@ -7,22 +7,23 @@ import { FilterSliceAcions } from "../Redux/Slice/FilterSlice/FilterSlice";
 import { Title } from "../utils/constraints/title";
 import { movieData } from "../utils/constraints/ShowMovie";
 import AddMovieList from "../components/common/AddMovie/AddMovieList";
-const FeelGood=()=>{
-const [currentSlideFeelGood, setCurrentSlideFeelGood] = useState(0);
-const [filterData, setFilterData] = useState({});
-const movieArray = Object.values(movieData);
-const dispatch=useDispatch()
-useEffect(() => {
-    const newFilterData = {};
 
+const FeelGood = () => {
+  const [currentSlideFeelGood, setCurrentSlideFeelGood] = useState(0);
+  const [filterData, setFilterData] = useState({});
+
+  const movieArray = Object.values(movieData);
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    const newFilterData = {};
     Title.forEach((title) => {
       const genreMovies = movieArray.filter((movie) => movie.Heading === title);
       newFilterData[title] = genreMovies;
     });
-
     setFilterData(newFilterData);
   }, []);
-  console.log(filterData)
+  // console.log(filterData)
   dispatch(FilterSliceAcions.FilterSliceData(filterData))
   const itemsPerSlide = 4;
   const totalSlides = Math.ceil((filterData.recommend?.length || 0) / itemsPerSlide);
@@ -30,20 +31,21 @@ useEffect(() => {
     setCurrentSlideFeelGood(
       (prevSlide) =>
         (prevSlide + 1) %
-       totalSlides
+        totalSlides
     );
   };
 
   const prevSlideFeelGood = () => {
     setCurrentSlideFeelGood(
       (prevSlide) =>
-        (prevSlide - 1 +totalSlides) %
-       totalSlides
+        (prevSlide - 1 + totalSlides) %
+        totalSlides
     );
   };
-return (
+
+  return (
     <>
- <h4 style={{ color: "white" }} className="headingTitle1">
+      <h4 style={{ color: "white" }} className="headingTitle1">
         FeelGood Movie
       </h4>
       <div className="cardData">
@@ -54,7 +56,7 @@ return (
               (currentSlideFeelGood + 1) * itemsPerSlide
             )
             .map((movie) => {
-           
+
               return (
                 <div key={movie.id}>
                   <AddMovieList movies={movie} />
@@ -76,18 +78,18 @@ return (
             )}
             {currentSlideFeelGood <
               Math.ceil((filterData.feelgood?.length || 0) / itemsPerSlide) -
-                1 && (
-              <img
-                src={rightArrow}
-                alt="Next"
-                className="rightArrow1"
-                onClick={nextSlideFeelGood}
-              />
-            )}
+              1 && (
+                <img
+                  src={rightArrow}
+                  alt="Next"
+                  className="rightArrow1"
+                  onClick={nextSlideFeelGood}
+                />
+              )}
           </div>
         )}
       </div>
     </>
-)
+  )
 }
 export default FeelGood

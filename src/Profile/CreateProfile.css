@@ -279,3 +279,19 @@
         font-size: 2rem;
     }
 }
+@media only screen and (min-width: 1700px ) and (max-width:2500px) {
+    .createButtons{
+        display: flex;
+        gap: 2rem;
+        margin-left: 49rem;
+        margin-top: 5rem;
+    }
+}
+@media only screen and (min-width: 1550px ) and (max-width:1700px) {
+    .createButtons{
+        display: flex;
+        gap: 2rem;
+        margin-left: 42rem;
+        margin-top: 5rem;
+    }
+}
