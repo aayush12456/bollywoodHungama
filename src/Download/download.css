@@ -1,3 +1,51 @@
 .moviesDownload{
     font-size: 1.4rem
 }
+@media only screen and (min-width: 350px ) and (max-width:500px) {
+    .moviesDownload{
+        font-size: 4.4rem;
+        width: 82rem;
+        padding-left: 17rem;
+        padding-top: 3rem;
+    }
+}
+@media only screen and (min-width: 500px ) and (max-width:600px) {
+    .moviesDownload{
+        font-size: 4.4rem;
+        width: 82rem;
+        padding-left: 17rem;
+        padding-top: 3rem;
+    }
+}
+@media only screen and (min-width: 600px ) and (max-width:700px) {
+    .moviesDownload{
+        font-size: 4.4rem;
+        width: 82rem;
+        padding-left: 17rem;
+        padding-top: 3rem;
+    }
+}
+@media only screen and (min-width: 700px ) and (max-width:800px) {
+    .moviesDownload{
+        font-size: 4.4rem;
+        width: 82rem;
+        padding-left: 30rem;
+        padding-top: 3rem;
+    }
+}
+@media only screen and (min-width: 800px ) and (max-width:900px) {
+    .moviesDownload{
+        font-size: 4.4rem;
+        width: 82rem;
+        padding-left: 30rem;
+        padding-top: 3rem;
+    }
+}
+@media only screen and (min-width: 900px ) and (max-width:1000px) {
+    .moviesDownload{
+        font-size: 4.4rem;
+        width: 82rem;
+        padding-left: 30rem;
+        padding-top: 3rem;
+    }
+}

@@ -19,6 +19,7 @@ import NewProfilePage from './Pages/Profile/NewProfilePage';
 import CreateProfilePage from './Pages/Profile/CreateProfilePage';
 import DownloadPage from './Pages/Download/DownloadPage';
 import StoreDataPage from './Pages/storeData/storeDataPage';
+import ErrorPage from './Pages/Error/ErrorPage';
 function App() {
   const videoSelector=useSelector(state=>state.passMovie.passMovie)
   const dataSlice=useSelector(state=>state.dataSlice)
@@ -54,7 +55,12 @@ function App() {
   {path:'/login',element:<LoginPage/>},
   {path:'/profiles',element:<ProfilePage/>},
   {path:'/newProfile',element:<NewProfilePage/>},
-  {path:'/createProfile',element:<CreateProfilePage/>}
+  {path:'/createProfile',element:<CreateProfilePage/>},
+  {path:'/error',element:<ErrorPage/>},
+  {
+    path: '*',
+    element: <Navigate to="/error" /> // Redirect to ErrorPage for unmatched paths
+  }
  ])
   return (
     <>
