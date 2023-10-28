@@ -1,0 +1,33 @@
+.movieCss{
+    margin-top: 12rem;
+}
+@media only screen and (min-width: 350px ) and (max-width:450px) {
+    .movieCss{
+        margin-top: 79rem;
+    }
+}
+@media only screen and (min-width: 500px ) and (max-width:600px) {
+    .movieCss{
+        margin-top: 68rem;
+    }
+}
+@media only screen and (min-width: 600px ) and (max-width:700px) {
+    .movieCss{
+        margin-top: 60rem;
+    }
+}
+@media only screen and (min-width: 700px ) and (max-width:800px) {
+    .movieCss{
+        margin-top: 54rem;
+    }
+}
+@media only screen and (min-width: 800px ) and (max-width:900px) {
+    .movieCss{
+        margin-top: 52rem; 
+    }
+}
+@media only screen and (min-width: 900px ) and (max-width:1000px) {
+    .movieCss{
+        margin-top: 65rem; 
+    }
+}

@@ -3,14 +3,16 @@ import { Link } from 'react-router-dom'
 import './SideBarMenu.css'
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
-
+import { useNavigate } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 const SideBarMenu = ({ data }) => {
 
   const dispatch = useDispatch()
   const [upimg, setUpImg] = useState(true)
   const [nameupimg, setnameUpImg] = useState(true)
   const [genreupimg, setgenreUpImg] = useState(true)
-
+  const navigate=useNavigate()
+  const profileName=useSelector(state=>state.profileData)
   const downClick = () => {
     setUpImg(false)
   }
@@ -34,13 +36,22 @@ const SideBarMenu = ({ data }) => {
   const genreupClick = () => {
     setgenreUpImg(true)
   }
-
+  const authData=()=>{
+  navigate('/login')
+  }
+  const sidebarTitle=()=>{
+    navigate('/AddMovie')
+  }
   return (
     <>
       <div className='menu-data' >
         <img src={data.image} className="icon-img mx-4 icon " />
         <h5 class="card-title title text-white ">{data.title}</h5>
-        <p className='authdata'>{data.auth}</p>
+        {!profileName.profileData ? (
+  <p className='authdata text-white' onClick={authData}>{data.auth}</p>
+  
+) :null}
+   { profileName.profileData==='+918770770302'? (<Link to='/AddMovie' style={{textDecoration:'none'}}> <p className='AddMovie text-white'   >{data.titles}</p>    </Link>):null}
       </div>
       <div>
         {upimg && <img src={data.downArrow} className='downArrow' onClick={downClick} />}
@@ -75,6 +86,7 @@ const SideBarMenu = ({ data }) => {
             })
 
           }
+       
         </div>
       </div>
     </>

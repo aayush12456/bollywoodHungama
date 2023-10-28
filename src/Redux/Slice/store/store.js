@@ -6,6 +6,8 @@ import FilterSlice from "../FilterSlice/FilterSlice";
 import AddProfileSlice from '../profileSlice/profileSlice'
 import profileNameSlice from "../profileName/profileNameSlice";
 import deleteProfileSlice from "../profileSlice/deleteProfileSlice";
+import { profileData } from "../../../utils/constraints/ShowProfile";
+import passSliceData from "../passSlice/passSliceData";
 const store = configureStore({
     reducer: { 
         hamburger:hamburgerSlice,
@@ -14,8 +16,8 @@ const store = configureStore({
         deleteProfileSlice:deleteProfileSlice.reducer,
         passMovie:PassMovieSlice,
         filterSlice:FilterSlice,
-        profileName:profileNameSlice
-         
+        profileName:profileNameSlice,
+        profileData:passSliceData
     
     }
 })

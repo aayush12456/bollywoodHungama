@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom'
 import { profileData } from '../utils/constraints/ShowProfile'
 import { useState, useEffect } from 'react'
 import { useDispatch } from 'react-redux'
-import { PassMovieSliceAcions } from '../Redux/Slice/PassMovie/PassMovieSlice'
 import './NewProfile.css'
 import { ProfileNameSliceActions, profileNameSlice } from '../Redux/Slice/profileName/profileNameSlice'
 

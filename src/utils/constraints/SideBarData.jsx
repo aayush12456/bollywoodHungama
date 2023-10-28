@@ -26,7 +26,9 @@ export const SidebarData=[
         id:'5',title:'Download',image:download
     },
     {
-   id:'6',auth:'SignOut',image:''
+   id:'6',auth:'Login',image:''
     },
-    
+    {
+        id:'7',titles:'Add Movie',image:'',
+         },
 ]

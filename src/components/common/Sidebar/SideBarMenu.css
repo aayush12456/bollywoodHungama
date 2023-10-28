@@ -11,6 +11,7 @@
     font-weight: 400;
     text-align: center;
 }
+
 .icon {
     filter: brightness(0) invert(1);
   }
@@ -31,6 +32,9 @@
 .authdata{
 display: none;
 }
+.AddMovie{
+    display: none;
+    }
 }
 @media only screen and (max-width: 500px) {
     .icon-img{
@@ -50,7 +54,11 @@ display: none;
         margin-left:25rem;
         margin-top: -6rem;
       }
-    
+      .AddMovie{
+        font-size: 3rem;
+        font-weight: 400;
+        text-align: center;
+    }
 }
 @media only screen and (min-width: 500px ) and (max-width:800px) {
     .icon-img{
@@ -60,6 +68,11 @@ display: none;
         font-size: 3rem;
     }
     .authdata{
+        font-size: 3rem;
+        font-weight: 400;
+        text-align: center;
+    }
+    .AddMovie{
         font-size: 3rem;
         font-weight: 400;
         text-align: center;
@@ -80,7 +93,7 @@ display: none;
     }
     .authdata{
         font-size: 4rem;
-        font-weight: 400;
+        font-weight: 500;
         text-align: center;
     }
     .downArrow {
@@ -89,4 +102,9 @@ display: none;
         margin-left:30rem;
         margin-top: -6rem;
       }
+      .AddMovie{
+        font-size: 4rem;
+        font-weight: 400;
+        text-align: center;
+    }
 }

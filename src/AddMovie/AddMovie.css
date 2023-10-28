@@ -17,3 +17,129 @@
     color: red;
 }
 
+@media only screen and (min-width: 350px ) and (max-width:500px) {
+    .movieCard{
+        width: 70rem;
+        position: absolute;
+        left: 15rem;
+        top: 24rem;
+        height: 40rem;
+    }
+    .form-control{
+        font-size: 2rem;
+    } 
+    .buttons{
+        font-size: 2rem;
+        position: relative;
+        top: 5rem;
+        left: -30rem;
+       }
+       #inputField{
+        font-size: 1.2rem;
+    }
+}
+@media only screen and (min-width: 500px ) and (max-width:600px) {
+    .movieCard{
+        width: 100rem;
+        height: 40rem;  
+        position: absolute;
+        left: 4rem;
+        top: 24rem;
+    }
+    #inputField{
+        font-size: 1.5rem;
+    }
+    .form-control{
+        font-size: 2rem;
+    } 
+    .buttons{
+     font-size: 2rem;
+     position: relative;
+     top: 5rem;
+     left: -40rem;
+    }
+}
+@media only screen and (min-width: 600px ) and (max-width:700px) {
+    .movieCard{
+        width: 120rem;
+        height: 40rem;  
+        position: absolute;
+        left: 6rem;
+        top: 24rem;
+    }
+    #inputField{
+        font-size: 1.5rem;
+    }
+    .form-control{
+        font-size: 2rem;
+    } 
+    .buttons{
+     font-size: 2rem;
+     position: relative;
+     top: 5rem;
+     left: -50rem;
+    }
+}
+@media only screen and (min-width: 700px ) and (max-width:800px) {
+    .movieCard{
+        width: 120rem;
+        height: 40rem;  
+        position: absolute;
+        left: 10rem;
+        top: 24rem;
+    }
+    #inputField{
+        font-size: 1.5rem;
+    }
+    .form-control{
+        font-size: 2rem;
+    } 
+    .buttons{
+     font-size: 2rem;
+     position: relative;
+     top: 5rem;
+     left: -50rem;
+    }
+}
+@media only screen and (min-width: 800px ) and (max-width:900px) {
+    .movieCard{
+        width: 120rem;
+        height: 40rem;  
+        position: absolute;
+        left: 30rem;
+        top: 24rem;
+    }
+    #inputField{
+        font-size: 1.5rem;
+    }
+    .form-control{
+        font-size: 2rem;
+    } 
+    .buttons{
+     font-size: 2rem;
+     position: relative;
+     top: 5rem;
+     left: -50rem;
+    }
+}
+@media only screen and (min-width: 900px ) and (max-width:1000px) {
+    .movieCard{
+        width: 120rem;
+        height: 40rem;  
+        position: absolute;
+        left: 30rem;
+        top: 24rem;
+    }
+    #inputField{
+        font-size: 1.5rem;
+    }
+    .form-control{
+        font-size: 2rem;
+    } 
+    .buttons{
+     font-size: 2rem;
+     position: relative;
+     top: 5rem;
+     left: -50rem;
+    }
+}

@@ -1,0 +1,6 @@
+@media only screen and (min-width: 350px ) and (max-width:450px) {
+    .kidsCss{
+        position: relative;
+        top: 65rem;
+    }
+}

@@ -15,6 +15,7 @@ import { profileData } from '../../../utils/constraints/ShowProfile'
 import Swal from 'sweetalert2'
 import swal from 'sweetalert'
 import { PassMovieSliceAcions } from '../../../Redux/Slice/PassMovie/PassMovieSlice'
+import { PassSliceDataActions } from '../../../Redux/Slice/passSlice/passSliceData'
 
 const Header = () => {
   const dispatch = useDispatch()
@@ -57,7 +58,7 @@ const Header = () => {
   const addMovie = () => {
     navigate('/AddMovie')
   }
-
+  dispatch(PassSliceDataActions.profileNameData(mobileData))
   const updateRecommendations = (inputText) => {
     const lowerCaseInput = inputText.toLowerCase();
     const filteredMovies = movieArray.filter(
@@ -227,7 +228,7 @@ const Header = () => {
           )}
           {mobileData === "+918770770302" ? (
             <div className="form-group userAdd">
-              <p onClick={addMovie}>Add User</p>
+              <p onClick={addMovie}>Add Movie</p>
             </div>
 
           ) : null}

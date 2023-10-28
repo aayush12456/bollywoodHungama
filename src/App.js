@@ -19,7 +19,6 @@ import NewProfilePage from './Pages/Profile/NewProfilePage';
 import CreateProfilePage from './Pages/Profile/CreateProfilePage';
 import DownloadPage from './Pages/Download/DownloadPage';
 import StoreDataPage from './Pages/storeData/storeDataPage';
-
 function App() {
   const videoSelector=useSelector(state=>state.passMovie.passMovie)
   const dataSlice=useSelector(state=>state.dataSlice)
