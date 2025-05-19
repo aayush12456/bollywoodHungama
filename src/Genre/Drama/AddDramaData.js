@@ -4,6 +4,7 @@ import { useSelector } from "react-redux"
 import { useState,useEffect } from "react"
 import { Title } from "../../utils/constraints/title"
 import { movieData } from "../../utils/constraints/ShowMovie"
+import {Helmet} from 'react-helmet'
 const AddDramaData=()=>{
     const filterSliceData=useSelector(state=>state.filterSlice.FilterSliceData)
     const movieArray = Object.values(movieData);
@@ -20,6 +21,9 @@ const AddDramaData=()=>{
       }, []);
 return (
     <>
+            <Helmet>
+            <title>BollyWood Hungama | Watch Drama Movies</title>
+        </Helmet>
      <h4 className='text-white headingTitle'>Drama</h4>
  <div className='cardDatas'>
  {

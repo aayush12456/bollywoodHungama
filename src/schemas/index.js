@@ -16,3 +16,9 @@ export const  AddMovieSchema=Yup.object({
     TrailerUrl: Yup.string().required('please enter TrailerUrl'),
     TrailerImage: Yup.string().required('please enter TrailerImage')
 })
+export const  signUpSchema=Yup.object({
+    firstName: Yup.string().required('please enter first name'),
+    lastName: Yup.string().required('please enter last name'),
+    Email: Yup.string().required('please enter email'),
+    Phone: Yup.string().max(40).required('please enter phone'),
+})

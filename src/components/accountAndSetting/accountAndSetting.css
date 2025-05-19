@@ -1,0 +1,140 @@
+.settingCard{
+    margin-left: 20rem;
+    margin-top: 1rem;
+    width: 59rem;
+}
+.settingText{
+font-size:1rem;
+}
+.deleteAccount{
+    width: 20%;
+    height: 40;
+}
+.accountCard{
+    display: flex;
+    justify-content: space-between;
+    gap: 40;
+}
+@media only screen and (max-width: 400px) {
+    .settingCard{
+        margin-left: 4rem;
+        margin-top: 3rem;
+        
+    }
+    .settingText{
+        font-size:2rem;
+        padding-top: 6rem;
+        margin-bottom: 3rem;
+        margin-left: -7rem;
+        }
+        .accountCard{
+            display: flex;
+            justify-content: space-between;
+        }
+        .deleteAccount{
+            width: 50%;
+            height: 30%;
+            font-size:1.5rem;
+            margin-top: 12%;
+            margin-left: 1rem;
+        }
+        .deleteTitle{
+            font-size: 1.6rem;
+            
+        }
+        .accountsTitle{
+            font-size: 2rem;
+            text-align: center;
+        }
+}
+@media only screen and (min-width: 400px ) and (max-width:500px){
+    .settingCard{
+        margin-left: 4rem;
+        margin-top: 3rem;
+        width: 79rem;
+    }
+    .settingText{
+        font-size:2rem;
+        padding-top: 6rem;
+        margin-bottom: 3rem;
+        margin-left: -7rem;
+        }
+        .accountCard{
+            display: flex;
+            justify-content: space-between;
+        }
+        .deleteAccount{
+            width: 50%;
+            height: 30%;
+            font-size:1.5rem;
+            margin-top: 10%;
+            margin-left: 1rem;
+        }
+        .deleteTitle{
+            font-size: 1.6rem;
+            text-align: center;
+        }
+        .accountsTitle{
+            font-size: 2.5rem;
+            text-align: center;
+        }
+}
+@media only screen and (min-width: 500px ) and (max-width:600px){
+    .settingCard{
+        margin-left: 4rem;
+        margin-top: 3rem;
+        width: 59rem;
+    }
+    .settingText{
+        font-size:1.6rem;
+   
+                }
+        .accountCard{
+            display: flex;
+            justify-content: space-between;
+        }
+        .deleteAccount{
+            width: 40%;
+            height: 30%;
+            font-size:1.5rem;
+            margin-top: 1%;
+            margin-left: 1rem;
+        }
+        .deleteTitle{
+            font-size: 1.5rem;
+        }
+        .accountsTitle{
+            font-size: 2rem;
+            text-align: center;
+        }
+}
+@media only screen and (min-width: 600px ) and (max-width:1000px){
+    .settingCard{
+        margin-left: 14rem;
+        margin-top: 3rem;
+        width: 59rem;
+    }
+    .settingText{
+        font-size:1.6rem;
+   
+                }
+              
+        .accountCard{
+            display: flex;
+            justify-content: space-between;
+        }
+        .deleteAccount{
+            width: 40%;
+            height: 30%;
+            font-size:1.5rem;
+            margin-top: 1%;
+            margin-left: 1rem;
+        }
+        .deleteTitle{
+            font-size: 1.5rem;
+        }
+        .accountsTitle{
+            font-size: 2rem;
+            text-align: center;
+        }
+}

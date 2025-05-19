@@ -2,17 +2,13 @@
 import { Link } from 'react-router-dom'
 import './SideBarMenu.css'
 import { useState } from 'react'
-import { useDispatch } from 'react-redux'
-import { useNavigate } from 'react-router-dom'
-import { useSelector } from 'react-redux'
+import { useDispatch } from "react-redux"
+import { hamburgerActions } from '../../../Redux/Slice/authSlice/hamburgerSlice'
 const SideBarMenu = ({ data }) => {
-
-  const dispatch = useDispatch()
+  const dispatch=useDispatch()
   const [upimg, setUpImg] = useState(true)
   const [nameupimg, setnameUpImg] = useState(true)
   const [genreupimg, setgenreUpImg] = useState(true)
-  const navigate=useNavigate()
-  const profileName=useSelector(state=>state.profileData)
   const downClick = () => {
     setUpImg(false)
   }
@@ -36,59 +32,69 @@ const SideBarMenu = ({ data }) => {
   const genreupClick = () => {
     setgenreUpImg(true)
   }
-  const authData=()=>{
-  navigate('/login')
+  
+ 
+  const tamilClickHandler=()=>{
+    setUpImg(true)
+    setnameUpImg(true)
+    dispatch(hamburgerActions.handleToggle())
   }
-  const sidebarTitle=()=>{
-    navigate('/AddMovie')
+  const anotherClickHandler=()=>{
+    setgenreUpImg(true)
+    setUpImg(true)
+    setnameUpImg(true)
+    dispatch(hamburgerActions.handleToggle())
   }
   return (
     <>
       <div className='menu-data' >
-        <img src={data.image} className="icon-img mx-4 icon " />
+        <img src={data.image} className="icon-img mx-4 icon " alt='menuImage' />
         <h5 class="card-title title text-white ">{data.title}</h5>
-        {!profileName.profileData ? (
+        {/* {!profileName.profileData ? (
   <p className='authdata text-white' onClick={authData}>{data.auth}</p>
   
-) :null}
-   { profileName.profileData==='+918770770302'? (<Link to='/AddMovie' style={{textDecoration:'none'}}> <p className='AddMovie text-white'   >{data.titles}</p>    </Link>):null}
+) :null} */}
+   {/* { profileName.profileData==='+918770770302'? (<Link to='/AddMovie' style={{textDecoration:'none'}}> <p className='AddMovie text-white'   >{data.titles}</p>    </Link>):null} */}
       </div>
       <div>
-        {upimg && <img src={data.downArrow} className='downArrow' onClick={downClick} />}
-        {!upimg && <img src={data.upArrow} className='downArrow' onClick={upClick} />}
+        {upimg && <img src={data.downArrow} className='downArrow' alt=''  onClick={downClick} />}
+        {!upimg && <img src={data.upArrow} className='downArrow' alt=''  onClick={upClick} />}
         <div>
 
           {!upimg && <h5 className='text-white name'>{data.feature?.name}</h5>}
-          {!upimg && nameupimg && <img src={data.feature?.downArrow} className='downArrow' onClick={namedownClick} />}
-          {!nameupimg && <img src={data.feature?.upArrow} className='downArrow' onClick={nameupClick} />}
+          {!upimg && nameupimg && <img src={data.feature?.downArrow} className='downArrow' alt=''  onClick={namedownClick} />}
+          {!nameupimg && <img src={data.feature?.upArrow} className='downArrow' alt=''   onClick={nameupClick} />}
           {
             !nameupimg && data.feature?.array.map(item => {
-              const language = item.language
+              // console.log('item is',item)
+              const language = item.link
               return (
                 <>
-                  {<Link to={`/feature/${language}`} style={{ textDecoration: 'none' }}><h6 className='text-white language'>{item.language}</h6></Link>}
+                  {<Link to={language} style={{ textDecoration: 'none' }} onClick={tamilClickHandler}><h6 className='text-white language' style={{marginTop:'-1rem'}} >{item.language}</h6></Link>}
                 </>
               )
             })
           }
           {!upimg && <h5 className='text-white name'>{data.genre?.name}</h5>}
-          {!upimg && genreupimg && <img src={data.genre?.downArrow} className='downArrow' onClick={genredownClick} />}
-          {!genreupimg && <img src={data.genre?.upArrow} className='downArrow' onClick={genreupClick} />}
+          {!upimg && genreupimg && <img src={data.genre?.downArrow} className='downArrow' alt='' onClick={genredownClick} />}
+          {!genreupimg && <img src={data.genre?.upArrow} className='downArrow' alt='' onClick={genreupClick} />}
+          <div style={{marginTop:'-1.3rem'}}>
           {
             !genreupimg && data.genre?.array.map(item => {
               // console.log(item)
-              const language = item.language
+              const language = item.link
               return (
                 <>
-                  {<Link to={`/genre/${language}`} style={{ textDecoration: 'none' }}><h6 className='text-white language'>{item.language}</h6></Link>}
+                  {<Link to={language}  style={{ textDecoration: 'none' }} onClick={anotherClickHandler}><h6 className='text-white language' >{item.language}</h6></Link>}
                 </>
               )
             })
 
           }
-       
+            </div>       
         </div>
       </div>
+      
     </>
   )
 }

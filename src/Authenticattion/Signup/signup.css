@@ -1,0 +1,72 @@
+#primeSign{
+    display: flex;
+    justify-content: center;
+}
+.signup{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 36px;
+    text-align: center;
+}
+#cardsPrime{
+    margin-top: 2%;
+    width: 30%;
+    
+}
+.bollyImg{
+    display:flex;
+    justify-content: center;
+    margin-top:2%;
+}
+.bollysImg{
+    width: 10%;
+}
+@media only screen and (max-width: 350px){
+    #cardsPrime{
+        width: 100%;
+        margin-top: 3rem;
+    }
+    .bollysImg{
+        width: 30%;
+        margin-top: 1rem;
+    }
+}
+@media only screen and (min-width: 350px ) and (max-width:500px) {
+    #cardsPrime{
+        width: 100%;
+        margin-top: 3rem;
+    }
+    .bollysImg{
+        width: 30%;
+        margin-top: 1rem;
+    }
+    .form-control{
+        font-size: 1rem;
+    }
+}
+@media only screen and (min-width: 500px ) and (max-width:800px) {
+    #cardsPrime{
+        width: 70%;
+        margin-top: 3rem;
+    }
+    .bollysImg{
+        width: 30%;
+        margin-top: 1rem;
+    }
+    .form-control{
+        font-size: 1rem;
+    }
+}
+@media only screen and (min-width: 800px ) and (max-width:1000px) {
+    #cardsPrime{
+        width: 70%;
+        margin-top: 3rem;
+    }
+    .bollysImg{
+        width: 30%;
+        margin-top: 1rem;
+    }
+    .form-control{
+        font-size: 1rem;
+    }
+}

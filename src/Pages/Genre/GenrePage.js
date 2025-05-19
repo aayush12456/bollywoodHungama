@@ -1,6 +1,5 @@
 import AddComedyData from "../../Genre/Comedy/AddComedyData"
 import Footer from "../../components/common/Footer/Footer"
-
 const GenrePage=()=>{
 return (
     <>

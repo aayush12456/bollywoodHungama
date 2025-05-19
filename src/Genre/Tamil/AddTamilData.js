@@ -8,7 +8,7 @@ return (
      <h4 className='text-white headingTitle'>Tamil</h4>
  <div className='cardDatas'>
  {
-filterSliceData.tamil.map(movie=>{
+filterSliceData?.tamil?.map(movie=>{
     return (
         <>
         <AddMovieList movies={movie}/>

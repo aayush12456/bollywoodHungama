@@ -9,7 +9,7 @@ const Dashboard=()=>{
     
 return (
     <>
-    <div className="parentBoard">
+    <div className="parentBoard" style={{zIndex:10}}>
     <Header/>
     </div>
     <div className="bigSidebar">
@@ -21,7 +21,7 @@ return (
 }
 
     </div>
-    <div className="outlet" >
+    <div className="outlet"  >
     <Outlet/>
     </div>
 

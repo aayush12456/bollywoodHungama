@@ -137,7 +137,20 @@ video::-webkit-media-controls-volume-slider {
   filter: brightness(0) invert(1);
   cursor: pointer;
 }
+.watchButton {
+  width: 5rem;
+  margin-left: 22rem;
+  margin-top: 1.5rem;
+  filter: brightness(0) invert(1);
+  cursor: pointer;
+}
 .play {
+  margin-left: 1.5rem;
+  margin-top: 3rem;
+  color: #fff;
+  cursor: pointer;
+}
+.watch {
   margin-left: 1.5rem;
   margin-top: 3rem;
   color: #fff;
@@ -262,6 +275,17 @@ display: none;
   width: 3.6rem;
   height: 4rem;
 }
+.watchButton {
+  width: 13rem;
+  margin-left: 10rem;
+  margin-top: 1.3rem;
+  filter: brightness(0) invert(1);
+  cursor: pointer;
+}
+.watchTitle{
+  font-size: 4rem;
+  padding-left: 3rem;
+}
 }
 @media only screen and (min-width: 500px ) and (max-width:600px) {
   .fade-container {
@@ -359,6 +383,18 @@ display: none;
   );
 
   z-index: 2; /* Make sure the gradient is above the image */
+}
+.watchButton {
+  width: 14rem;
+  margin-left: 14rem;
+  margin-top: 4.3rem;
+  filter: brightness(0) invert(1);
+  cursor: pointer;
+}
+.watchTitle{
+  font-size: 3.5rem;
+  padding-left: 3rem;
+  margin-top: 5rem;
 }
 }
 @media only screen and (min-width: 600px ) and (max-width:700px) {
@@ -458,8 +494,17 @@ display: none;
 
   z-index: 2; /* Make sure the gradient is above the image */
 }
-.imgButton{
-
+.watchButton {
+  width: 14rem;
+  margin-left: 14rem;
+  margin-top: 4.3rem;
+  filter: brightness(0) invert(1);
+  cursor: pointer;
+}
+.watchTitle{
+  font-size: 3.5rem;
+  padding-left: 3rem;
+  margin-top: 5rem;
 }
 }
 @media only screen and (min-width: 700px ) and (max-width:800px) {
@@ -657,6 +702,18 @@ display: none;
 
   z-index: 2; /* Make sure the gradient is above the image */
 }
+.watchButton {
+  width: 14rem;
+  margin-left: 14rem;
+  margin-top: 4.3rem;
+  filter: brightness(0) invert(1);
+  cursor: pointer;
+}
+.watchTitle{
+  font-size: 3.5rem;
+  padding-left: 3rem;
+  margin-top: 5rem;
+}
 }
 @media only screen and (min-width: 900px ) and (max-width:1000px) {
   .fade-container {
@@ -754,6 +811,18 @@ display: none;
   );
 
   z-index: 2; /* Make sure the gradient is above the image */
+}
+.watchButton {
+  width: 14rem;
+  margin-left: 14rem;
+  margin-top: 4.3rem;
+  filter: brightness(0) invert(1);
+  cursor: pointer;
+}
+.watchTitle{
+  font-size: 3.5rem;
+  padding-left: 3rem;
+  margin-top: 5rem;
 }
 }
 @media only screen and (min-width: 900px ) and (max-width:1000px) {
@@ -860,5 +929,19 @@ display: none;
     transition: opacity 0.5s ease;
     opacity: 1;
     overflow: hidden;
+  }
+}
+@media only screen and (min-width: 700px ) and (max-width:800px){
+  .watchButton {
+    width: 14rem;
+    margin-left: 14rem;
+    margin-top: 4.3rem;
+    filter: brightness(0) invert(1);
+    cursor: pointer;
+  }
+  .watchTitle{
+    font-size: 3.5rem;
+    padding-left: 3rem;
+    margin-top: 5rem;
   }
 }

@@ -1,60 +1,7 @@
-.phone{
-    width: 30rem;
-}
-.otp{
-  padding-left: 29rem;
-  color: red;
-}
-#button{
-    display: flex;
-    gap: 2rem;
-    margin-left: 3.6rem; 
-}
-#buttons{
-    width: 26.6rem;
-    height: 3rem;
-}
-.mobileInput{
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    margin-left: 30rem;
-    position: absolute;
-    top: 12rem;
-    
-}
 
-.captcha-container{
-    width: 30rem;
-    margin-left: 30rem;
-    margin-top: 4rem;
-}
-#recaptcha-container{
-margin-left: 3.5rem;
-margin-top: 1rem;
-}
 .form-control1{
     width: 30rem;
-    margin-left: 30rem;
     margin-top: 12rem;
-    height: 3rem;
-    padding-left: 1rem;
-}
-.button-right{
-    display: flex;
-    gap: 2rem;
-    margin-left: 31rem;
-    margin-top: 2rem;
-}
-#cancel{
-    width: 8rem;
-    height: 2.7rem;
-}
-#verify{
-    width: 8rem;
-    height: 2.7rem; 
-}
-.PhoneInputInput{
     height: 3rem;
     padding-left: 1rem;
 }
@@ -65,6 +12,10 @@ margin-top: 1rem;
    background-size: cover;
    height: 100vh;
 }
+.loginOtpButton{
+    width: 25%;
+    height: 2.5rem;
+}
 @media only screen and (min-width: 350px ) and (max-width:450px) {
     .backImage{
         background-image: url('https://open-stand.org/wp-content/uploads/2016/04/International-Union-of-Cinemas-Calls-for-Open-Standards-in-the-Cinema-Industry.jpg');
@@ -73,39 +24,36 @@ margin-top: 1rem;
         background-size: cover;
         height: 100vh;
      }
-     .mobileInput{
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 1rem;
-        margin-left: 0rem;
-        position: absolute;
-        top: 12rem;
-        
-    }
-    .phone{
-        width: 20rem;
-    }
-    #button{
-        display: flex;
-        gap: 2rem;
-        margin-left: 3.5rem; 
-    }
-    #buttons{
-        width: 16rem;
-        height: 3rem;
-    }
+    
     .form-control1{
         width: 20rem;
-        margin-left: 1rem;
+        /* margin-left: 1rem;
         margin-top: 10rem;
         height: 3rem;
-        padding-left: 1rem;
+        padding-left: 1rem; */
     }
-    .button-right{
-        display: flex;
-        gap: 2rem;
-        margin-left: 1rem;
-        margin-top: 2rem;
+    .loginOtpButton{
+        width: 60%;
+    }
+}
+@media only screen and (min-width: 450px ) and (max-width:500px) {
+    .backImage{
+        background-image: url('https://open-stand.org/wp-content/uploads/2016/04/International-Union-of-Cinemas-Calls-for-Open-Standards-in-the-Cinema-Industry.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 100vh;
+     }
+    
+    .form-control1{
+        width: 20rem;
+        /* margin-left: 1rem;
+        margin-top: 10rem;
+        height: 3rem;
+        padding-left: 1rem; */
+    }
+    .loginOtpButton{
+        width: 60%;
     }
 }
 @media only screen and (min-width: 500px ) and (max-width:600px) {
@@ -116,40 +64,15 @@ margin-top: 1rem;
         background-size: cover;
         height: 100vh;
      }
-     .mobileInput{
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 1rem;
-        margin-left: 5rem;
-        position: absolute;
-        top: 12rem;
-        
-    }
-    .phone{
-        width: 20rem;
-    }
-    #button{
-        display: flex;
-        gap: 2rem;
-        margin-left: 3.5rem; 
-    }
-    #buttons{
-        width: 16rem;
-        height: 3rem;
-    }
+    
     .form-control1{
         width: 20rem;
-        margin-left: 5rem;
+        /* margin-left: 5rem;
         margin-top: 10rem;
         height: 3rem;
-        padding-left: 1rem;
+        padding-left: 1rem; */
     }
-    .button-right{
-        display: flex;
-        gap: 2rem;
-        margin-left: 5rem;
-        margin-top: 2rem;
-    }
+    
 }
 @media only screen and (min-width: 600px ) and (max-width:700px) {
     .backImage{
@@ -159,40 +82,15 @@ margin-top: 1rem;
         background-size: cover;
         height: 100vh;
      }
-     .mobileInput{
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 1rem;
-        margin-left: 8rem;
-        position: absolute;
-        top: 12rem;
-        
-    }
-    .phone{
-        width: 20rem;
-    }
-    #button{
-        display: flex;
-        gap: 2rem;
-        margin-left: 3.5rem; 
-    }
-    #buttons{
-        width: 16rem;
-        height: 3rem;
-    }
+    
     .form-control1{
         width: 20rem;
-        margin-left: 8rem;
+        /* margin-left: 8rem;
         margin-top: 10rem;
         height: 3rem;
-        padding-left: 1rem;
+        padding-left: 1rem; */
     }
-    .button-right{
-        display: flex;
-        gap: 2rem;
-        margin-left: 8rem;
-        margin-top: 2rem;
-    }
+   
 }
 @media only screen and (min-width: 700px ) and (max-width:800px) {
     .backImage{
@@ -202,40 +100,15 @@ margin-top: 1rem;
         background-size: cover;
         height: 100vh;
      }
-     .mobileInput{
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 1rem;
-        margin-left: 12rem;
-        position: absolute;
-        top: 12rem;
-        
-    }
-    .phone{
-        width: 20rem;
-    }
-    #button{
-        display: flex;
-        gap: 2rem;
-        margin-left: 3.5rem; 
-    }
-    #buttons{
-        width: 16rem;
-        height: 3rem;
-    }
+    
     .form-control1{
         width: 20rem;
-        margin-left: 12rem;
+        /* margin-left: 12rem;
         margin-top: 10rem;
         height: 3rem;
-        padding-left: 1rem;
+        padding-left: 1rem; */
     }
-    .button-right{
-        display: flex;
-        gap: 2rem;
-        margin-left: 12rem;
-        margin-top: 2rem;
-    }
+  
 }
 @media only screen and (min-width: 800px ) and (max-width:900px) {
     .backImage{
@@ -245,40 +118,15 @@ margin-top: 1rem;
         background-size: cover;
         height: 100vh;
      }
-     .mobileInput{
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 1rem;
-        margin-left: 16rem;
-        position: absolute;
-        top: 12rem;
-        
-    }
-    .phone{
-        width: 20rem;
-    }
-    #button{
-        display: flex;
-        gap: 2rem;
-        margin-left: 3.5rem; 
-    }
-    #buttons{
-        width: 16rem;
-        height: 3rem;
-    }
+   
     .form-control1{
         width: 20rem;
-        margin-left: 16rem;
+        /* margin-left: 16rem;
         margin-top: 10rem;
         height: 3rem;
-        padding-left: 1rem;
+        padding-left: 1rem; */
     }
-    .button-right{
-        display: flex;
-        gap: 2rem;
-        margin-left: 16rem;
-        margin-top: 2rem;
-    }
+  
 }
 @media only screen and (min-width: 900px ) and (max-width:1000px) {
     .backImage{
@@ -288,62 +136,16 @@ margin-top: 1rem;
         background-size: cover;
         height: 100vh;
      }
-     .mobileInput{
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 1rem;
-        margin-left: 19rem;
-        position: absolute;
-        top: 12rem;
-        
-    }
-    .phone{
-        width: 20rem;
-    }
-    #button{
-        display: flex;
-        gap: 2rem;
-        margin-left: 3.5rem; 
-    }
-    #buttons{
-        width: 16rem;
-        height: 3rem;
-    }
-    .form-control1{
-        width: 20rem;
-        margin-left: 19rem;
-        margin-top: 10rem;
-        height: 3rem;
-        padding-left: 1rem;
-    }
-    .button-right{
-        display: flex;
-        gap: 2rem;
-        margin-left: 19rem;
-        margin-top: 2rem;
-    }
+    
 }
 @media only screen and (min-width: 1550px ) and (max-width:2500px) {
-    .mobileInput{
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 1rem;
-        margin-left: 37rem;
-        position: absolute;
-        top: 16rem;
-        
-    }
+ 
     .form-control1{
         width: 30rem;
-        margin-left: 37%;
+        /* margin-left: 30%;
         margin-top: 16rem;
         height: 3rem;
-        padding-left: 1rem;
+        padding-left: 1rem; */
     }
-    .button-right{
-        display: flex;
-        gap: 2rem;
-        margin-left: 45rem;
-        margin-top: 2rem;
-    }
+    
 }

@@ -4,6 +4,7 @@ import '../Comedy/AddComedyData.css'
 import { useState,useEffect } from "react"
 import { Title } from "../../utils/constraints/title"
 import { movieData } from "../../utils/constraints/ShowMovie"
+import {Helmet} from 'react-helmet'
 const AddRomanceData=()=>{   
     const filterSliceData=useSelector(state=>state.filterSlice.FilterSliceData) 
     const movieArray = Object.values(movieData);
@@ -20,6 +21,9 @@ const AddRomanceData=()=>{
       }, []);
 return (
     <>
+        <Helmet>
+            <title>BollyWood Hungama | Watch Romantic Movies</title>
+        </Helmet>
     <h4 className='text-white headingTitle'>Romance</h4>
  <div className='cardDatas'>
  {

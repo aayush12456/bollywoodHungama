@@ -1,32 +1,21 @@
-import { useState, useEffect } from 'react';
+
+import React from 'react';
 import { Navigate } from 'react-router-dom';
-import { onAuthStateChanged } from 'firebase/auth';
-import { auth } from '../../firebase/firebase.js';
-import { useSelector } from "react-redux";
-const ProtectedRoute = ({ children }) => {
-    const [user, setUser] = useState(null);
-    const playVideos = useSelector(state => state.passMovie.passMovie);
-    const movieId = playVideos.MovieId;
-    useEffect(() => {
-      const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-        setUser(currentUser);
-      });
-  
-      return () => {
-        unsubscribe();
-      };
-    }, []);
-  
-    if (!user) {
-      // Redirect to the login page if the user is not authenticated
-      return <Navigate to="/login" />;
-    }
-   else if (user) {
-      // Redirect to the login page if the user is not authenticated
-      return <Navigate to="" />;
-    }
-     return children;
-  };
-  
+
+const ProtectedRoute = ({ element }) => {
+  const tokenObj = JSON.parse(sessionStorage.getItem('verifyLoginOtpObject'));
+  const token=tokenObj?.token
+  // console.log('token is protect',token)
+
+  if (!token ) {
+    return <Navigate to="/login" />;
+  }
+  else if (!token) {
+    return <Navigate to="/" />
+     }
+
+  return element;
+};
+
 
 export default ProtectedRoute;

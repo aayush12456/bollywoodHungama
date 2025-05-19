@@ -6,7 +6,6 @@
 }
 .rightArrow{
     filter: brightness(0) invert(1);
-   /* margin-top: -20rem; */
    z-index: 2;
    position: absolute;
    top: 15rem;
@@ -16,7 +15,6 @@
  
   .leftArrow{
     filter: brightness(0) invert(1);
-   /* margin-top: -20rem; */
    z-index: 2;
    position: absolute;
    top: 15rem;
@@ -95,30 +93,31 @@ width: 1rem;
         display: flex;
         gap: 1rem;
         margin-left: 2rem;
+        /* display: none; */
     }
     .rightArrow{
-        filter: brightness(0) invert(1);
-        /* margin-top: -20rem; */
+        /* filter: brightness(0) invert(1);
         z-index: 2;
         position: absolute;
         top: 19rem;
         left: 96rem;
         cursor: pointer;
-        width: 5rem;
+        width: 5rem; */
+        display: none;
       }
       .leftArrow{
-        filter: brightness(0) invert(1);
-       /* margin-top: -20rem; */
+        /* filter: brightness(0) invert(1);
        z-index: 2;
        position: absolute;
        top: 19rem;
        left: 2rem;
        cursor: pointer;
-       width: 4rem;
+       width: 4rem; */
+       display: none;
       }
   }
   @media only screen and (min-width: 350px ) and (max-width:450px) {
-    .cardData{
+     .cardData{
       display: flex;
       gap: 1rem;
       margin-left: 2rem;
@@ -140,7 +139,7 @@ width: 1rem;
     font-size: 3rem;
     padding-left: 3rem;
     width: 44rem;
-  }
+  } 
   .headingTitle3{
     padding-top: 2rem;
     font-size: 3rem;
@@ -192,7 +191,7 @@ width: 1rem;
      cursor: pointer;
      width: 5rem;
     }
-    .leftArrow2{
+.leftArrow2{
       filter: brightness(0) invert(1);
      z-index: 2;
      position: absolute;
@@ -218,7 +217,7 @@ width: 1rem;
      left: 2rem;
      cursor: pointer;
      width: 4rem;
-    }
+    } 
   }
   @media only screen and (min-width: 500px ) and (max-width:600px) {
     .cardData{
@@ -242,7 +241,11 @@ width: 1rem;
       font-size: 3rem;
       padding-left: 3rem;
     }
-    .rightArrow{
+  
+ .rightArrow2{
+        filter: brightness(0) invert(1);
+ }
+      .rightArrow{
         filter: brightness(0) invert(1);
        z-index: 2;
        position: absolute;
@@ -268,7 +271,7 @@ width: 1rem;
        left: 105rem;
        cursor: pointer;
        width: 5rem;
-      }
+      } 
       .leftArrow1{
         filter: brightness(0) invert(1);
        z-index: 2;
@@ -277,10 +280,7 @@ width: 1rem;
        left: 2rem;
        cursor: pointer;
        width: 4rem;
-      }
-      .rightArrow2{
-        filter: brightness(0) invert(1);
-       z-index: 2;
+         z-index: 2;
        position: absolute;
        top: 80rem;
        left: 105rem;
@@ -304,7 +304,7 @@ width: 1rem;
        left: 105rem;
        cursor: pointer;
        width: 5rem;
-      }
+      } 
       .leftArrow3{
         filter: brightness(0) invert(1);
        z-index: 2;
@@ -324,7 +324,6 @@ width: 1rem;
     }
     .rightArrow{
         filter: brightness(0) invert(1);
-        /* margin-top: -20rem; */
         z-index: 2;
         position: absolute;
         top: 27rem;
@@ -335,7 +334,6 @@ width: 1rem;
       }
       .leftArrow{
         filter: brightness(0) invert(1);
-       /* margin-top: -20rem; */
        z-index: 2;
        position: absolute;
        top: 26rem;
@@ -425,7 +423,6 @@ width: 1rem;
     }
     .rightArrow{
         filter: brightness(0) invert(1);
-        /* margin-top: -20rem; */
         z-index: 2;
         position: absolute;
         top: 30rem;
@@ -436,7 +433,6 @@ width: 1rem;
       }
       .leftArrow{
         filter: brightness(0) invert(1);
-       /* margin-top: -20rem; */
        z-index: 2;
        position: absolute;
        top: 30rem;
@@ -624,7 +620,6 @@ width: 1rem;
     }
     .rightArrow{
         filter: brightness(0) invert(1);
-        /* margin-top: -20rem; */
         z-index: 2;
         position: absolute;
         top: 30rem;
@@ -635,7 +630,6 @@ width: 1rem;
       }
       .leftArrow{
         filter: brightness(0) invert(1);
-       /* margin-top: -20rem; */
        z-index: 2;
        position: absolute;
        top: 30rem;
@@ -724,7 +718,6 @@ width: 1rem;
   }
   .rightArrow{
     filter: brightness(0) invert(1);
-
    z-index: 2;
    position: absolute;
    top: 15.5rem;

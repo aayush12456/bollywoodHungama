@@ -10,6 +10,7 @@ const AddMovieList = ({ movies, index }) => {
 
   const [hoveredIndex, setHoveredIndex] = useState(-1)
   const movieSelector = useSelector(state => state.passMovie.passMovie)
+  const movieTokenObj=JSON.parse(sessionStorage.getItem('verifyLoginOtpObject'))
   const [show, setShow] = useState(false)
   const [user, setUser] = useState(null);
   
@@ -36,7 +37,7 @@ const AddMovieList = ({ movies, index }) => {
   }, []);
 
   const movieClickHandler = (movies) => {
-    if (user) {
+    if (movieTokenObj?.token) {
       navigate('/movie', { state: movies });
     } else {
       navigate('/login');
@@ -50,10 +51,10 @@ const AddMovieList = ({ movies, index }) => {
       >
         <div className='card-container' onMouseEnter={() => mousEnter(index)} onMouseLeave={mouseLeave}>
           <div class="card cardShow " >
-            <img src={movies.ImageUrl} class="card-img-top" alt="..." onClick={() => movieClickHandler(movies)} />
+            <img src={movies.ImageUrl || movies.imageUrl} class="card-img-top" alt="imageUrl" onClick={() => movieClickHandler(movies)} />
             <div class={`card-body card-body2 ${hoveredIndex === index ? 'hovered' : ''}`}>
-              <h5 class="card-title" onClick={() => movieClickHandler(movies)}>{movies.Title}</h5>
-              <p class="card-text" onClick={() => movieClickHandler(movies)}>{movies.Description}</p>
+              <h5 class="card-title" onClick={() => movieClickHandler(movies)}>{movies.Title || movies.title}</h5>
+              <p class="card-text" onClick={() => movieClickHandler(movies)}>{movies.Description || movies.description}</p>
             </div>
           </div>
 

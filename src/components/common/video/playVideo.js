@@ -4,12 +4,12 @@ import './playVideo.css'
 import crossIcon from '../../../assets/modalicons/crossicon.svg'
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-const PlayVideo = () => {
+const PlayVideo = ({movieDetail}) => {
   const videoPlayData = useSelector(state => state.passMovie.passMovie)
   // console.log(videoPlayData)
   // const videoPlayData = videoData.state
   const navigate = useNavigate()
-  const videoId = videoPlayData.MovieId
+  const videoId = videoPlayData.MovieId || videoPlayData.movieId
   const videoUrl = `https://www.youtube.com/watch?v=${videoId}`;
   const opts = {
     height: '440',
@@ -20,7 +20,7 @@ const PlayVideo = () => {
   };
 
   const crossIcons = () => {
-    navigate('/')
+    navigate('/movie',{state:movieDetail})
   }
   // console.log(videoUrl)
   return (
@@ -28,7 +28,7 @@ const PlayVideo = () => {
       <div className="container" onClick={crossIcons}>
         <div className="video-container">
           <div class="cards cardVideo"  >
-            <img src={crossIcon} className="crossIcon" onClick={crossIcons} />
+            <img src={crossIcon} className="crossIcon" onClick={crossIcons} alt="crossIcon" />
             <YouTube videoId={videoId} className="video" opts={opts} />
           </div>
         </div>

@@ -3,6 +3,7 @@ import '../Comedy/AddComedyData.css'
 import { useState,useEffect } from "react"
 import { Title } from "../../utils/constraints/title"
 import { movieData } from "../../utils/constraints/ShowMovie"
+import {Helmet} from 'react-helmet'
 const AddKidsData=()=>{
     const movieArray = Object.values(movieData);
     const [filterData, setFilterData] = useState({});
@@ -18,6 +19,9 @@ const AddKidsData=()=>{
       }, []);
 return (
     <>
+           <Helmet>
+            <title>BollyWood Hungama | Watch Kids Movies</title>
+        </Helmet>
      <h4 className='text-white headingTitle'>Kids</h4>
  <div className='cardDatas'>
  {

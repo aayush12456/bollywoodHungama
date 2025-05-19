@@ -7,7 +7,21 @@
     width: 18rem;
     height: 41.5rem;
 }
-
+.sidebarJoin{
+    display: none;
+}
+.sidebarLogin{
+    display:none;
+}
+.profileSidebar{
+    display: none;
+}
+.profileSidebarName{
+ display: none;
+}
+.sidebarLogout{
+    display: none;
+}
 @media only screen and (max-width: 500px) {
     .card-body1{
         display: grid;
@@ -20,6 +34,39 @@
         position: absolute;
         z-index: 1;
         
+    }
+    .sidebarJoin{
+        display: block;
+        width: 50%;
+        height: 3rem;
+        margin-top: 5rem;
+        margin-left: 5rem;
+        font-size: 1.4rem;
+    }
+    .sidebarLogin{
+        display: block;
+        margin-top: 4rem;
+        width: 50%;
+        height: 3rem;
+        margin-left: 5rem;
+        font-size: 1.4rem;
+    }
+    .profileSidebar{
+        width:4rem;
+        display: block;
+    }
+    .profileSidebarName{
+        display: block;
+        color:white;
+        font-size: 2.5rem;
+    }
+    .sidebarLogout{
+        display:block;
+        color: white;
+        font-size: 3rem;
+        font-weight: 500;
+        padding-top: 3rem;
+        padding-left: 7rem;
     }
 }
 @media only screen and (min-width: 500px ) and (max-width:800px) {
@@ -34,6 +81,40 @@
         position: absolute;
         z-index: 1;
     }
+    .sidebarJoin{
+        display: block;
+        width: 50%;
+        height: 3rem;
+        margin-top: 5rem;
+        margin-left: 5rem;
+        font-size: 1.4rem;
+    }
+    .sidebarLogin{
+        display: block;
+        margin-top: 4rem;
+        width: 50%;
+        height: 3rem;
+        margin-left: 5rem;
+        font-size: 1.4rem;
+    }
+    .profileSidebar{
+        width:4rem;
+        display: block;
+    }
+    .profileSidebarName{
+        display: block;
+        color:white;
+        font-size: 3rem;
+    }
+    .sidebarLogout{
+        display:block;
+        color: white;
+        font-size: 3rem;
+        font-weight: 500;
+        padding-left: 7rem;
+        padding-top: 5rem;
+    }
+
 }
 
 @media only screen and (min-width: 800px ) and (max-width:1000px) {
@@ -45,5 +126,38 @@
     .sidebarCard{
         width: 40rem;
         height: 122.5rem;
+    }
+    .sidebarJoin{
+        display: block;
+        width: 50%;
+        height: 3rem;
+        margin-top: 5rem;
+        margin-left: 5rem;
+        font-size: 1.4rem;
+    }
+    .sidebarLogin{
+        display: block;
+        margin-top: 4rem;
+        width: 50%;
+        height: 3rem;
+        margin-left: 5rem;
+        font-size: 1.4rem;
+    }
+    .profileSidebar{
+        width:4rem;
+        display: block;
+    }
+    .profileSidebarName{
+        display: block;
+        color:white;
+        font-size:3.8rem;
+    }
+    .sidebarLogout{
+        display:block;
+        color: white;
+        font-size: 3.8rem;
+        font-weight: 500;
+        padding-top: 5rem;
+        padding-left: 7rem;
     }
 }

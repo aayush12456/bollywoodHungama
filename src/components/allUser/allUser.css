@@ -1,0 +1,36 @@
+.allUserCard{
+    width: 40%;
+    margin-left: 30rem;
+}
+.card-user-details{
+    display: flex;
+    justify-content: space-between;
+}
+@media only screen and (max-width: 500px) {
+    .allUserCard{
+        width: 80rem;
+        margin-left: 6rem;
+    }
+    .card-user{
+        font-size: 2rem;    
+    }
+    .card-user-details{
+        display: flex;
+        justify-content: space-between;
+        gap: 4rem;
+    }
+}
+@media only screen and (min-width: 500px ) and (max-width:1000px) {
+    .allUserCard{
+        margin-left: 4rem;
+        width: 80rem;
+    }
+    .card-user{
+        font-size: 2rem;    
+    }
+    .card-user-details{
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+}
