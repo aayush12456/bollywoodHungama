@@ -146,7 +146,7 @@ const MovieContent = () => {
                         <div className="gradient-container">
                             <img
                                 src={finalMovieData.TrailerImage || finalMovieData.trailerImage}
-                                alt="Image before video starts"
+                                alt={finalMovieData.Title || finalMovieData.title || "Movie Thumbnail"}
                                 className="start-image1"
                                 loading="eager"
                             />
@@ -172,7 +172,7 @@ const MovieContent = () => {
                         <div className="gradient-container">
                             <img
                                 src={finalMovieData.TrailerImage || finalMovieData.trailerImage}
-                                alt="Image before video starts"
+                                alt={finalMovieData.Title || finalMovieData.title || "Movie Thumbnails"}
                                 className="start-image1"
                                 loading="eager"
                             />
@@ -199,7 +199,7 @@ const MovieContent = () => {
                         <div className="gradient-container">
                             <img
                                 src={finalMovieData.TrailerImage || finalMovieData.trailerImage}
-                                alt="Image before video starts"
+                                alt={finalMovieData.Title || finalMovieData.title || "Movie Thumbnailss"}
                                 className="start-image"
                                 loading="eager"
                             />

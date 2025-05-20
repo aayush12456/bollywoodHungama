@@ -8,11 +8,11 @@ import { useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { movieData } from '../../../utils/constraints/ShowMovie'
 import profiles from '../../../assets/profileicons/profile.png'
-import { profileData } from '../../../utils/constraints/ShowProfile'
-import Swal from 'sweetalert2'
+// import { profileData } from '../../../utils/constraints/ShowProfile'
+// import Swal from 'sweetalert2'
 import swal from 'sweetalert'
-import { PassMovieSliceAcions } from '../../../Redux/Slice/PassMovie/PassMovieSlice'
-import { PassSliceDataActions } from '../../../Redux/Slice/passSlice/passSliceData'
+// import { PassMovieSliceAcions } from '../../../Redux/Slice/PassMovie/PassMovieSlice'
+// import { PassSliceDataActions } from '../../../Redux/Slice/passSlice/passSliceData'
 import { profilesActions } from '../../../Redux/Slice/profilesSlice/profilesSlice'
 const Header = () => {
   const dispatch = useDispatch()
@@ -24,14 +24,14 @@ const Header = () => {
   // console.log(mobile)
   const verifyOtpObj = JSON.parse(sessionStorage.getItem('verifyLoginOtpObject'));
   // console.log('verify otp in header',verifyOtpObj)
-  const [mobileItem, setMobile] = useState(false)
-  const [mobileData, setMobileData] = useState(" ")
-  const [loginData, setLogin] = useState(true)
-  const [user, setUser] = useState(false);
-  const [arr, setArr] = useState([])
-  const [profile, setProfile] = useState(true)
-  const [selectedProfile, setSelectedProfile] = useState("");
-  const [searchItem, setSearch] = useState(true)
+  // const [mobileItem, setMobile] = useState(false)
+  // const [mobileData, setMobileData] = useState(" ")
+  // const [loginData, setLogin] = useState(true)
+  // const [user, setUser] = useState(false);
+  // const [arr, setArr] = useState([])
+  // const [profile, setProfile] = useState(true)
+  // const [selectedProfile, setSelectedProfile] = useState("");
+  // const [searchItem, setSearch] = useState(true)
   const [recommendations, setRecommendations] = useState([]);
   const [searchResult, setSearchResult] = useState([]);
 
@@ -39,11 +39,11 @@ const Header = () => {
   //   const mobileData = mobile.state
   //   setMobileData(mobileData)
   // }, [])
-  useEffect(() => {
-    // This code will run only once when the component mounts
-    const profileArray = Object.values(profileData);
-    setArr(profileArray);
-  }, []);
+  // useEffect(() => {
+  //   // This code will run only once when the component mounts
+  //   const profileArray = Object.values(profileData);
+  //   setArr(profileArray);
+  // }, []);
   // console.log(arr)
   useEffect(() => {
     window.addEventListener('keydown', handleBackspace);
@@ -59,7 +59,7 @@ const Header = () => {
   const addMovie = () => {
     navigate('/AddMovie/:admin')
   }
-  dispatch(PassSliceDataActions.profileNameData(mobileData))
+  // dispatch(PassSliceDataActions.profileNameData(mobileData))
   const updateRecommendations = (inputText) => {
     const lowerCaseInput = inputText.toLowerCase();
     const filteredMovies = movieArray.filter(
@@ -78,7 +78,7 @@ const Header = () => {
 
   const handleBackspace = (e) => {
     if (e.keyCode === 8) {
-      setSearch('');
+      // setSearch('');
       setRecommendations([]);
     }
   };
@@ -90,15 +90,15 @@ const Header = () => {
 
   const login = () => {
     navigate('/login')
-    setLogin(false)
+    // setLogin(false)
   }
 
-  const mobiles = (mobileData) => {
-    setMobile(true)
-    setUser(!user)
-    setProfile(true)
-    setMobileData(mobileData)
-  }
+  // const mobiles = (mobileData) => {
+  //   setMobile(true)
+  //   setUser(!user)
+  //   setProfile(true)
+  //   setMobileData(mobileData)
+  // }
 
  
 

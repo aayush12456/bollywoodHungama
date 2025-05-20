@@ -1,6 +1,6 @@
 import './AddMovieList.css'
 import { useState } from "react"
-import { useSelector } from 'react-redux'
+// import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 // import { auth } from '../../../firebase/firebase'
 // import { onAuthStateChanged } from 'firebase/auth';
@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom'
 const AddMovieList = ({ movies, index }) => {
 
   const [hoveredIndex, setHoveredIndex] = useState(-1)
-  const movieSelector = useSelector(state => state.passMovie.passMovie)
+  // const movieSelector = useSelector(state => state.passMovie.passMovie)
   const movieTokenObj=JSON.parse(sessionStorage.getItem('verifyLoginOtpObject'))
   // const [show, setShow] = useState(false)
   // const [user, setUser] = useState(null);
