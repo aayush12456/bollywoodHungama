@@ -6,7 +6,6 @@ export const  AddMovieSchema=Yup.object({
     Rating: Yup.string().required('please enter Rating'),
     Time: Yup.string().required('please enter Time'),
     Date: Yup.string().required('please enter Date'),
-    Rating: Yup.string().required('please enter Rate'),
     Genres: Yup.string().required('please enter Genres'),
     ImageUrl: Yup.string().required('please enter ImageUrl'),
     Directors: Yup.string().required('please enter Directors'),

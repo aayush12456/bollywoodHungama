@@ -107,7 +107,7 @@ const MovieContent = () => {
     return () => {
       socket.off("getWatchlist");
     };
-  }, [id]);
+  }, [id,verifyLoginOtpObject?.loginUserObj?.phone]);
 //   console.log('get watch list array',getWatchListArray)
   useEffect(() => {
     if (id && finalMovieData?.title) {

@@ -52,7 +52,7 @@ const SignUp=()=>{
       navigate('/')
       dispatch(resetRegisterState());
       }
-      },[registerSelector])
+      },[registerSelector,dispatch,navigate])
 return (
     <>
     <div>

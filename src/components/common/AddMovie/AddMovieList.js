@@ -1,9 +1,9 @@
 import './AddMovieList.css'
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-import { auth } from '../../../firebase/firebase'
-import { onAuthStateChanged } from 'firebase/auth';
+// import { auth } from '../../../firebase/firebase'
+// import { onAuthStateChanged } from 'firebase/auth';
 
 
 const AddMovieList = ({ movies, index }) => {
@@ -11,30 +11,30 @@ const AddMovieList = ({ movies, index }) => {
   const [hoveredIndex, setHoveredIndex] = useState(-1)
   const movieSelector = useSelector(state => state.passMovie.passMovie)
   const movieTokenObj=JSON.parse(sessionStorage.getItem('verifyLoginOtpObject'))
-  const [show, setShow] = useState(false)
-  const [user, setUser] = useState(null);
+  // const [show, setShow] = useState(false)
+  // const [user, setUser] = useState(null);
   
 
   const navigate = useNavigate()
-  const title = movieSelector?.Title
+  // const title = movieSelector?.Title
 
   const mousEnter = (index) => {
     setHoveredIndex(index)
-    setShow(true)
+    // setShow(true)
   }
   const mouseLeave = () => {
     setHoveredIndex(-1)
-    setShow(false)
+    // setShow(false)
   }
 
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      setUser(currentUser);
-    });
-    return () => {
-      unsubscribe();
-    };
-  }, []);
+  // useEffect(() => {
+  //   const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+  //     setUser(currentUser);
+  //   });
+  //   return () => {
+  //     unsubscribe();
+  //   };
+  // }, []);
 
   const movieClickHandler = (movies) => {
     if (movieTokenObj?.token) {

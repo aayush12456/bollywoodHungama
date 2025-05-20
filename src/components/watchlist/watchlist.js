@@ -9,7 +9,7 @@ const socket = io.connect("https://bollywoodprojectbackend.onrender.com");
 const BASE_URL = "https://bollywoodprojectbackend.onrender.com/user";
 const WatchList=()=>{
     const idObj=JSON.parse(sessionStorage.getItem('verifyLoginOtpObject'))
-    console.log('id obj in watch',idObj)
+    // console.log('id obj in watch',idObj)
     const id=idObj?.loginUserObj?._id
     const [getWatchListArray,setGetWatchListArray]=useState([])
     useEffect(() => {
@@ -37,7 +37,7 @@ const WatchList=()=>{
         return () => {
           socket.off("getWatchlist");
         };
-      }, [id]);
+      }, [id,idObj?.loginUserObj?.phone]);
       // console.log('get watch list array',getWatchListArray)
 return (
     <>

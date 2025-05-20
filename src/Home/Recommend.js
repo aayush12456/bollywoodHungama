@@ -49,7 +49,7 @@ const Recommended = () => {
     return () => {
       socket.off("getWatchlist");
     };
-  }, [id],idObj?.loginUserObj?.phone);
+  }, [id,idObj?.loginUserObj?.phone]);
   // console.log('get watch list array recommend',getWatchListArray)
   const finalMovieArray = getWatchListArray
   ? movieArray.filter(

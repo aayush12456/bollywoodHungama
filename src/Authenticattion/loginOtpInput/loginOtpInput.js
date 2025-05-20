@@ -47,7 +47,7 @@ useEffect(()=>{
     dispatch(resetVerifyLoginOtpState());
     
   }
-   },[verifyLoginOtpObj])
+   },[verifyLoginOtpObj,dispatch,navigate])
 return(
     <>
        <div className='backImage'  >

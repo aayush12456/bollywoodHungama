@@ -29,9 +29,9 @@ import ProtectedRoute from './Authenticattion/Protected/ProtectedRoute';
 function App() {
   const socketRef = useRef(null);
   const videoSelector=useSelector(state=>state.passMovie.passMovie)
-  const dataSlice=useSelector(state=>state.dataSlice)
+  // const dataSlice=useSelector(state=>state.dataSlice)
 
-  const title = videoSelector.Title;
+  // const title = videoSelector.Title;
   const movieId=videoSelector.MovieId
 const idObj=JSON.parse(sessionStorage.getItem('verifyLoginOtpObject'))
 const id=idObj?._id

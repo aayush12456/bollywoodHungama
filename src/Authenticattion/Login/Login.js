@@ -44,7 +44,7 @@ if(loginOtpObj){
   navigate('/verifyOtp')
   dispatch(resetLoginOtpState());
 }
- },[loginOtpObj])
+ },[loginOtpObj,dispatch,navigate])
   return (
     <>
       <div className='backImage'  >

@@ -15,13 +15,13 @@ const AllUserPage=()=>{
     if(id){
         dispatch(getAllUserData(id))
     }
-    },[id])
+    },[id,dispatch])
     useEffect(()=>{
      if(deleteProfileUser?._id){
         const removeArray=getAllUserArrays.filter((item)=>item?._id!==deleteProfileUser?._id)
         setGetAllUserArrays(removeArray)
      }
-    },[deleteProfileUser?._id,getAllUser])
+    },[deleteProfileUser?._id,getAllUser,getAllUserArrays])
 return (
     <>
     {

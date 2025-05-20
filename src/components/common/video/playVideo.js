@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom"
+// import { useLocation } from "react-router-dom"
 import YouTube from 'react-youtube';
 import './playVideo.css'
 import crossIcon from '../../../assets/modalicons/crossicon.svg'
@@ -10,7 +10,7 @@ const PlayVideo = ({movieDetail}) => {
   // const videoPlayData = videoData.state
   const navigate = useNavigate()
   const videoId = videoPlayData.MovieId || videoPlayData.movieId
-  const videoUrl = `https://www.youtube.com/watch?v=${videoId}`;
+  // const videoUrl = `https://www.youtube.com/watch?v=${videoId}`;
   const opts = {
     height: '440',
     width: '800',
