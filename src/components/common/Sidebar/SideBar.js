@@ -14,6 +14,7 @@ const Sidebar=()=>{
     // console.log('otp obj',verifyLoginOtpObject)
     const allUserHandler=()=>{
     navigate('/allUser')
+    dispatch(hamburgerActions.handleToggle())
     }
     const createAccount=()=>{
         navigate('/signup')
